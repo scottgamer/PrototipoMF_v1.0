@@ -3,14 +3,15 @@
 
     <!--Logo & brand name-->
     <div class="navbar-header">
-        <a class="navbar-brand"><img id="brand-image" src="assets/images/LogoTodo.svg"></a>
+        <a class="navbar-brand" href="/"> <span> <img id="brand-image" src="assets/images/Logo.svg">
+          <img id="brand-image" src="assets/images/LogoTitulo.svg"></span></a>
         <!--<span class="navbar-brand">Angular + Bootstrap</span>-->
       </div>
 
     <!--Search bar-->
     <form id="search-bar" class="navbar-form navbar-left" action="#">
       <div class="input-group">
-        <input type="text" class="form-control" placeholder="Search" name="search">
+        <input type="text" class="form-control" placeholder="Buscar aplicaciones..." name="search" size="40px">
         <div class="input-group-btn">
           <button class="btn btn-default" type="submit">
             <i class="glyphicon glyphicon-search"></i>
@@ -21,8 +22,9 @@
 
     <!--Login & Help Buttons-->
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Regístrate</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Ingresa</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-question-sign"></span> Ayuda</a></li>
     </ul>
   </div>
 </nav>
@@ -48,18 +50,70 @@
   </div>
 </nav>
 
+  <!-- <div style="text-align:center">
+    <h1>Catálogo de Aplicaciones para {{ title }}</h1>
+  </div> -->
 
-<!--The content below is only a placeholder and can be replaced.-->
-<div class="container">
-  <div style="text-align:center">
-    <h1>
-      Catálogo de Aplicaciones para {{ title }}
-    </h1>
-    <img width="300" alt="Angular Logo" src="../assets/images/logo.PNG">
+  <!--Section-->
+  <div class="row">
+    <div class="inner-row">
+      <div class="col-md-10">
+        <h4>Aplicaciones más descargadas</h4> 
+      </div>
+      <div class="col-md-2">
+        <button type="button" class="btn btn-info" tooltip="Ver más aplicaciones.">
+          ver más
+        </button>
+      </div>
+    </div>
+    <!--Applications-->
+    <div class="inner-row">
+      <div class="col-md-4">
+        <div class="jumbotron">
+          <img class="logo" src="assets/images/logos/app1.webp"  alt=""><br>
+          <div class="info">
+            <small>Nombre: {{name}}</small><br>
+            <small>Categoría: {{category}}</small><br>
+            <small>Valoración: {{rating}} estrellas</small><br>
+            <a *ngFor="let item of starList; let i=index " (click)="setStar(i)">
+                <i *ngIf="item" class="fa fa-star-o"></i>
+                <i *ngIf="!item" class="fa fa-star"></i>
+              </a>
+          </div>
+        </div>    
+      </div>
+      <div class="col-md-4">
+        <div class="jumbotron">
+            <img class="logo" src="assets/images/logos/app2.webp" alt=""><br>
+            <div class="info">
+              <small>Nombre: {{name}}</small><br>
+              <small>Categoría: {{category}}</small><br>
+              <small>Valoración: {{rating}} estrellas</small><br>
+              <a *ngFor="let item of starList; let i=index " (click)="setStar(i)">
+                  <i *ngIf="item" class="fa fa-star-o"></i>
+                  <i *ngIf="!item" class="fa fa-star"></i>
+                </a>
+            </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="jumbotron">
+          <img class="logo" src="assets/images/logos/app3.webp" alt=""><br>
+          <div class="info">
+            <small>Nombre: {{name}}</small><br>
+            <small>Categoría: {{category}}</small><br>
+            <small>Valoración: {{rating}} estrellas</small><br>
+            <a *ngFor="let item of starList; let i=index " (click)="setStar(i)">
+                <i *ngIf="item" class="fa fa-star-o"></i>
+                <i *ngIf="!item" class="fa fa-star"></i>
+              </a>
+          </div>
+        </div>
+      </div>
+    </div>   
   </div>
 
   <button type="button" class="btn btn-primary" tooltip="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
     Button with tooltip
   </button>
 
-</div>

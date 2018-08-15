@@ -1,28 +1,72 @@
 /* You can add global styles to this file, and also import other style files */
 
-    body{
-        font-size: 2em;
-    }
+body{
+    font-size: 1.6em;
+}
 
-    #brand-image{
-        width: 20%;
-        height: 35px;
-        padding: 5px;
-        
-        /*height: 120%;*/
-    }
+#brand-image{
+    /*width: 20%;*/
+    height: 55px;
+    padding: 5px;
+}
 
-    /*Second Navbar*/
-    .navbar-nav{
-       margin: 0 auto;
-       display: table;
-       table-layout: fixed;
-       float: none;
-    }
+#search-bar{
+    resize:both;
+}
 
-    .navbar{
+.navbar-form{
+    padding-left: 20px;
+}
 
-        margin: 0;
+/*Second Navbar*/
+.navbar-nav{
+    margin: 0 auto;
+    display: table;
+    table-layout: fixed;
+    float: none;
+}
+
+.navbar{
+    margin: 0;
+}
+
+.navbar-brand{
+    padding-top: 0px;
+}
+#button-align{
+    padding-left: 5px;
+}
+.row{
+    border: #cdcdcd medium solid;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+.inner-row{
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+.jumbotron{
+    padding-top: 24px;
+    padding-bottom: 14px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.info{
+    padding-top: 5px;
+}
+
+.logo{
+    width: 50%;
+}
+
+.info{
+    padding-left:5%;  
+}
+
+.fa-star {
+    color: red;
     }
 /*@media (min-width: 768px){  
 } */
