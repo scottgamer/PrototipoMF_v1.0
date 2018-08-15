@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+
+    body{
+        font-size: 2em;
+    }
+
+    #brand-image{
+        width: 20%;
+        height: 35px;
+        padding: 5px;
+        
+        /*height: 120%;*/
+    }
+
+    /*Second Navbar*/
+    .navbar-nav{
+       margin: 0 auto;
+       display: table;
+       table-layout: fixed;
+       float: none;
+    }
+
+    .navbar{
+
+        margin: 0;
+    }
+/*@media (min-width: 768px){  
+} */
