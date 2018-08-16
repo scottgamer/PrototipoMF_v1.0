@@ -12,13 +12,15 @@ import { HomeComponent } from './components/home/home.component';
 import { ApplicationsComponent } from './components/applications/applications.component';
 import { NewsComponent } from './components/news/news.component';
 import { EventsComponent } from './components/events/events.component';
+import { ApplicationComponent } from './components/application/application.component';
 
 const appRoutes: Routes = [
   {path:'', component:HomeComponent},
   {path:'home', component:HomeComponent},
   {path:'applications', component:ApplicationsComponent},
   {path:'news', component:NewsComponent},
-  {path:'events', component:EventsComponent}
+  {path:'events', component:EventsComponent},
+  {path:'application', component:ApplicationComponent}
 ];
 
 @NgModule({
@@ -27,7 +29,8 @@ const appRoutes: Routes = [
     ApplicationsComponent,
     HomeComponent,
     NewsComponent,
-    EventsComponent
+    EventsComponent,
+    ApplicationComponent
   ],
   imports: [
     BrowserModule,

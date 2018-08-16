@@ -1,0 +1,48 @@
+TODO Application
+
+<div class="row">
+  <div class="col-md-12">
+    <div id="application" class="jumbotron">
+
+      <div class="inner-row-app">
+        <div class="col-md-4">
+          <img class="logo" src="assets/images/logos/app1.webp" alt="">
+        </div>
+        <div class="col-md-4">
+          <div class="info">
+            <small>Nombre: {{name}}</small>
+            <br>
+            <small>Categoría: {{category}}</small>
+            <br>
+            <small>Valoración: {{rating}} estrellas</small>
+            <br>
+            <a *ngFor="let item of starList; let i=index " (click)="setStar(i)">
+              <i *ngIf="item" class="fa fa-star-o"></i>
+              <i *ngIf="!item" class="fa fa-star"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-4" id="btn-download">
+          <button type="button" class="btn btn-success" tooltip="Descargar aplicación.">Descargar</button>
+        </div>
+      </div>
+
+
+
+    
+    <hr>
+    <p>Seccion 2</p>  
+    <hr>
+    <p>Seccion 3</p>
+    <hr>
+    <p>Seccion 4</p>
+    <hr>
+    <p>Seccion 5</p>
+    <hr>
+    <p>Seccion 6</p>
+    <hr>
+    <p>Seccion 7</p>
+
+
+  </div>
+</div>

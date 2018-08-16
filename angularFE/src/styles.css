@@ -1,72 +1,147 @@
 /* You can add global styles to this file, and also import other style files */
 
-body{
-    font-size: 1.6em;
-}
 
-#brand-image{
-    /*width: 20%;*/
-    height: 55px;
-    padding: 5px;
-}
-
-#search-bar{
-    resize:both;
-}
-
-.navbar-form{
-    padding-left: 20px;
-}
-
-/*Second Navbar*/
-.navbar-nav{
-    margin: 0 auto;
-    display: table;
-    table-layout: fixed;
-    float: none;
-}
-
-.navbar{
-    margin: 0;
-}
-
-.navbar-brand{
-    padding-top: 0px;
-}
-#button-align{
-    padding-left: 5px;
-}
-.row{
-    border: #cdcdcd medium solid;
-    margin-bottom: 5px;
-    margin-top: 10px;
-}
-
-.inner-row{
-    padding-top: 10px;
-    padding-bottom: 5px;
-}
-.jumbotron{
-    padding-top: 24px;
-    padding-bottom: 14px;
-    padding-left: 30px;
-    padding-right: 30px;
-}
-
-.info{
-    padding-top: 5px;
-}
-
-.logo{
-    width: 50%;
-}
-
-.info{
-    padding-left:5%;  
-}
-
-.fa-star {
-    color: red;
+@media only screen and (min-width: 768px) {
+    /* tablets and desktop */
+    body{
+        font-size: 1.6em;
     }
+    
+    #brand-image{
+        /*width: 20%;*/
+        height: 55px;
+        padding: 5px;
+    }
+    
+    #search-bar{
+        resize:both;
+    }
+    
+    .navbar-form{
+        padding-left: 20px;
+    }
+    
+    /*Second Navbar*/
+    .navbar-nav{
+        margin: 0 auto;
+        display: table;
+        table-layout: fixed;
+        float: none;
+    }
+    
+    .navbar{
+        margin: 0;
+    }
+    
+    .navbar-brand{
+        padding-top: 0px;
+    }
+
+    #button-align{
+        padding-left: 5px;
+    }
+    .row{
+        border: #cdcdcd medium solid;
+        margin-bottom: 5px;
+        margin-top: 10px;
+        width: 850px;
+        margin:auto;
+    }
+    
+    .inner-row{
+        padding-top: 10px;
+        padding-bottom: 5px;
+    }
+    
+    .inner-row-app {
+        padding-top: 0px;
+        padding-bottom: 10px;
+        border: solid;
+        height: 179.8px;
+    }
+
+    .container .jumbotron{
+        padding:15px;
+    }
+
+    
+    #application{
+        margin-bottom: 0px;
+    }
+    
+    .info{
+        padding-top: 25px;
+        padding-left:5px;
+        font-size: 1.2em;
+    }
+
+    #btn-download{
+        padding-top: 55px;
+    }
+    
+    .logo{
+        padding-top: -5px;
+        width: 75%;
+    }
+    
+    .col-md-12{
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    
+    /* .fa-star {
+        color: red;
+    } */
+
+}
+
+@media only screen and (max-width: 768px) {
+    /* phones */
+
+    .navbar-brand{
+        padding-top: 10px;
+        height: 70px;
+    }
+    
+    #brand-image{
+        /*width: 20%;*/
+        height: 55px;
+        padding: 5px;
+    }
+    
+    .inner-row-app {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border: solid;
+        height: 100%;
+    }
+
+    .jumbotron{
+        padding:15px;
+    }
+
+    .info{
+        padding-top: 5px;
+        padding-left: 30px;
+        font-size: 1.2em;
+    }
+
+    #btn-download{
+        padding-top: 5px;
+        padding-left: 40px;
+    }
+
+    #btn-more{
+        padding-bottom: 10px;
+    }
+}
+
+/* for large screens and up */
+/* @media only screen and (min-width: 63em) {
+    
+}
+ */
 /*@media (min-width: 768px){  
 } */
