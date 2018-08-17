@@ -3,7 +3,7 @@ TODO Application
 <div class="row">
   <div class="col-md-12">
     <div id="application" class="jumbotron">
-
+      <!--Logo & basic info-->
       <div class="inner-row-app">
         <div class="col-md-4">
           <img class="logo" src="assets/images/logos/app1.webp" alt="">
@@ -27,22 +27,68 @@ TODO Application
         </div>
       </div>
 
+      <!-- Screenshots & carousel -->
+
+      <div class="inner-row-app" id="screenshots">
+        <div class="col-md-4">
+          <img src="assets/images/carousel/ca1.webp" alt="">
+        </div>
+        <div class="col-md-4">
+          <img src="assets/images/carousel/ca2.webp" alt="">
+        </div>
+        <div class="col-md-4">
+          <img src="assets/images/carousel/ca3.webp" alt="">
+        </div>
+      </div>
+
+      <!-- Description -->
+      <div class="inner-row-app" id="description">
+        <div class="col-md-12">
+          <h4>Descripción</h4>
+
+          <div class="">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt corrupti culpa, labore tenetur dolorum rerum pariatur
+            debitis nam eius voluptatibus neque, sed recusandae repellendus unde possimus ducimus incidunt voluptas consequatur.
+          </div>
+
+          <div id="collapseBasic" [collapse]="!isCollapsed" class="card card-block card-header">
+            <div class="">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt corrupti culpa, labore tenetur dolorum rerum pariatur
+              debitis nam eius voluptatibus neque, sed recusandae repellendus unde possimus ducimus incidunt voluptas consequatur.
+            </div>
+          </div>
+          <button id="read-more" type="button" class="btn btn-primary center-block" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed"
+            aria-controls="read-more" (collapsed)="collapsed()" (expanded)="expanded()">{{messageBtn}}
+          </button>
+          
+          <div id="collapseEvent" class="card card-block card-header" (collapsed)="collapsed()" (expanded)="expanded()" [collapse]="isCollapsed">
+          </div>
+        </div>
+      </div>
+
+      <!-- Rate and comment -->
+
+      
 
 
-    
-    <hr>
-    <p>Seccion 2</p>  
-    <hr>
-    <p>Seccion 3</p>
-    <hr>
-    <p>Seccion 4</p>
-    <hr>
-    <p>Seccion 5</p>
-    <hr>
-    <p>Seccion 6</p>
-    <hr>
-    <p>Seccion 7</p>
 
 
+
+
+
+      <hr>
+      <p>Seccion 2</p>
+      <hr>
+      <p>Seccion 3</p>
+      <hr>
+      <p>Seccion 4</p>
+      <hr>
+      <p>Seccion 5</p>
+      <hr>
+      <p>Seccion 6</p>
+      <hr>
+      <p>Seccion 7</p>
+
+
+    </div>
   </div>
-</div>

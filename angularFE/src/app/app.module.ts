@@ -3,9 +3,11 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes} from '@angular/router';
 
 //import { AppBootstrapModule } from './app-bootstrap/app-bootstrap.module';
+//Bootstrap components using ngx-bootstrap
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { CollapseModule } from 'ngx-bootstrap/collapse';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -37,6 +39,7 @@ const appRoutes: Routes = [
     BsDropdownModule.forRoot(),
     TooltipModule.forRoot(),
     ModalModule.forRoot(),
+    CollapseModule.forRoot(),
     RouterModule.forRoot(appRoutes)
   ],
   providers: [

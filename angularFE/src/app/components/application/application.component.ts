@@ -12,9 +12,13 @@ export class ApplicationComponent implements OnInit {
   starList: boolean[] = [true, true, true, true, true];
   rating: number;
 
+  isCollapsed = false;
+  messageBtn: string;
+
   constructor() { }
 
   ngOnInit() {
+    this.messageBtn= 'Leer más';
   }
 
   setStar(data: any) {
@@ -27,5 +31,13 @@ export class ApplicationComponent implements OnInit {
         this.starList[i] = true;
       }
     }
+  }
+
+  collapsed(): void {
+    this.messageBtn = 'Leer menos';
+  }
+ 
+  expanded(): void {
+    this.messageBtn = 'Leer más';
   }
 }

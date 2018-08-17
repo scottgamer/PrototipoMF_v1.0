@@ -3,6 +3,9 @@
 
 @media only screen and (min-width: 768px) {
     /* tablets and desktop */
+    .jumbotron p{
+        font-size: 1em;
+    }
     body{
         font-size: 1.6em;
     }
@@ -56,8 +59,15 @@
     .inner-row-app {
         padding-top: 0px;
         padding-bottom: 10px;
-        border: solid;
+        /* border: solid; */
         height: 179.8px;
+    }
+
+    #screenshots{
+        height: 334.8px;
+        padding-top: 10px;
+        padding-left: 30px;
+
     }
 
     .container .jumbotron{
@@ -87,6 +97,11 @@
     .col-md-12{
         padding-top: 15px;
         padding-bottom: 15px;
+    }
+
+    #read-more{
+        margin-top: 10px;
+        
     }
     
     /* .fa-star {
