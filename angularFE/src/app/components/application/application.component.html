@@ -30,6 +30,7 @@ TODO Application
       <!-- Screenshots & carousel -->
 
       <div class="inner-row-app" id="screenshots">
+        <h4>Screenshots</h4>
         <div class="col-md-4">
           <img src="assets/images/carousel/ca1.webp" alt="">
         </div>
@@ -42,33 +43,55 @@ TODO Application
       </div>
 
       <!-- Description -->
-      <div class="inner-row-app" id="description">
+      <div class="inner-row-app">
         <div class="col-md-12">
           <h4>Descripción</h4>
-
-          <div class="">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt corrupti culpa, labore tenetur dolorum rerum pariatur
-            debitis nam eius voluptatibus neque, sed recusandae repellendus unde possimus ducimus incidunt voluptas consequatur.
-          </div>
-
-          <div id="collapseBasic" [collapse]="!isCollapsed" class="card card-block card-header">
+          <div class="description">
             <div class="">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt corrupti culpa, labore tenetur dolorum rerum pariatur
               debitis nam eius voluptatibus neque, sed recusandae repellendus unde possimus ducimus incidunt voluptas consequatur.
             </div>
-          </div>
-          <button id="read-more" type="button" class="btn btn-primary center-block" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed"
-            aria-controls="read-more" (collapsed)="collapsed()" (expanded)="expanded()">{{messageBtn}}
-          </button>
-          
-          <div id="collapseEvent" class="card card-block card-header" (collapsed)="collapsed()" (expanded)="expanded()" [collapse]="isCollapsed">
+
+            <div id="collapseBasic" [collapse]="!isCollapsed" class="card card-block card-header">
+              <div class="">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt corrupti culpa, labore tenetur dolorum rerum pariatur
+                debitis nam eius voluptatibus neque, sed recusandae repellendus unde possimus ducimus incidunt voluptas consequatur.
+              </div>
+            </div>
+            <button id="read-more" type="button" class="btn btn-primary center-block" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed"
+              aria-controls="read-more" (collapsed)="collapsed()" (expanded)="expanded()">{{messageBtn}}
+            </button>
+
+            <div id="collapseEvent" class="card card-block card-header" (collapsed)="collapsed()" (expanded)="expanded()" [collapse]="isCollapsed">
+            </div>
           </div>
         </div>
       </div>
 
       <!-- Rate and comment -->
 
-      
+      <div class="inner-row-app" id="rate-comment">
+        <div class="col-md-12">
+          <h4>Califica y comenta</h4>
+          <div class="rate-comment">
+            <form action="">
+              <div id="rating">
+                Calificación: {{rating}}
+                <a *ngFor="let item of starList; let i=index " (click)="setStar(i)">
+                  <i *ngIf="item" class="fa fa-star-o"></i>
+                  <i *ngIf="!item" class="fa fa-star"></i>
+                </a>
+              </div>
+              <div id="comment">
+                Comentario:
+                <textarea class="form-control" name="comentario" id="comentario" cols="40" rows="5" placeholder="Ingrese su comentario"></textarea>
+              </div>
+              <input type="submit" class="btn btn-primary center-block" id="save-comment" value="Guardar">
+
+            </form>
+          </div>
+        </div>
+      </div>
 
 
 
