@@ -15,6 +15,15 @@ export class ApplicationComponent implements OnInit {
   isCollapsed = false;
   messageBtn: string;
 
+  country:string='España';
+  developedBy:string='Empresa';
+  version:number=1.0;
+  releaseDate:string='dd/mm/aaaa';
+  platform:string='móvil';
+  androidMin:string='4.0 kitkat';
+  appWebPage:string='www.app-web.com';
+
+
   constructor() { }
 
   ngOnInit() {

@@ -64,9 +64,9 @@
     }
 
     #screenshots{
-        height: 334.8px;
+        /* height: 334.8px; */
         padding-top: 10px;
-        padding-left: 30px;
+        padding-left: 20px;
 
     }
 
@@ -108,6 +108,7 @@
     }
     .rate-comment{
         padding-left: 10px;
+        padding-right: 10px;
     }
     #rating, #comment{
         padding-bottom: 5px;
@@ -122,7 +123,55 @@
         box-sizing: border-box;
         width: 90%;
     }
-    
+    .user-comment{
+        padding: 10px;
+        margin: 5px;
+        border: solid;
+    }
+    .user-image{
+        width: 5%;
+        margin: 5px;
+        float: left;
+    }
+    .user-name-rate{
+        margin-left:5px; 
+        float: left;
+    }
+    .date
+    {
+        float: right;
+        padding-right: 30%;   
+    }
+    .comment{
+        clear: right;
+        width: 90%;
+        padding: 5px;        
+    }
+    .more-comments{
+        padding: 5px;
+    }
+    .read-more-comment{
+        /* float: right; */
+    }
+    .left-pane{
+        float: left;
+        padding: 5px;
+        margin-left: 5%;
+    }
+    .right-pane{
+        float: right;
+        padding: 5px;
+        margin-right: 5%;
+        /* clear: left; */
+    }
+    .question{
+        padding: 10px;
+    }
+    .question-body, .response-body{
+        padding: 5px;
+    }
+
+
     /* .fa-star {
         color: red;
     } */
@@ -160,6 +209,10 @@
         padding-top: 5px;
         padding-left: 30px;
         font-size: 1.2em;
+    }
+    .col-md-4{
+        padding-top: 10px;
+        align-items: center;
     }
 
     #btn-download{
