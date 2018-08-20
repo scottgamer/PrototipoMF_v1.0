@@ -164,6 +164,10 @@
         margin-right: 5%;
         /* clear: left; */
     }
+    
+    .comment{
+        margin-top: 20px;
+    }
     .question{
         padding: 10px;
     }
@@ -227,6 +231,24 @@
         margin-top: 5px;
         margin-bottom: 5px;
     }
+    .user-comment{
+        padding-bottom: 5px;
+    }
+
+    .comment{
+        padding-bottom: 5px;
+    }
+    .question{
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .question-header{
+        padding-bottom: 5px;
+    }
+    .question-body, .response-body{
+        padding: 5px;
+    }
+
 }
 
 /* for large screens and up */

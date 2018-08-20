@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TemplateRef } from '@angular/core';
+
+import { BsModalService } from 'ngx-bootstrap/modal';
+import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
 
 @Component({
   selector: 'app-application',
@@ -22,9 +25,11 @@ export class ApplicationComponent implements OnInit {
   platform:string='móvil';
   androidMin:string='4.0 kitkat';
   appWebPage:string='www.app-web.com';
+  
+  modalRef: BsModalRef;
+  message: string;
 
-
-  constructor() { }
+  constructor(private modalService: BsModalService) { }
 
   ngOnInit() {
     this.messageBtn= 'Leer más';
@@ -48,5 +53,14 @@ export class ApplicationComponent implements OnInit {
  
   expanded(): void {
     this.messageBtn = 'Leer más';
+  }
+
+  openModal(template: TemplateRef<any>) {
+    this.modalRef = this.modalService.show(template, {class: 'modal-sm'});
+  }
+
+  confirm(): void {
+    // this.message = 'Confirmed!';
+    this.modalRef.hide();
   }
 }

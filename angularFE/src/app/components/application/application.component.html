@@ -90,7 +90,19 @@ TODO Application
                 Comentario:
                 <textarea class="form-control" name="comentario" id="comentario" cols="40" rows="5" placeholder="Ingrese su comentario"></textarea>
               </div>
-              <input type="submit" class="btn btn-primary center-block" id="save-comment" value="Guardar">
+
+              <button type="button" class="btn btn-primary center-block" (click)="openModal(templateSave)">Guardar</button>
+
+              <!-- Using modal message -->
+
+              <ng-template #templateSave>
+                <div class="modal-body text-center">
+                  <p>¡Comentario guardado exitosamente!</p>
+                  <button type="button" class="btn btn-default" (click)="confirm()">Ok</button>
+                </div>
+              </ng-template>
+
+              <!-- <input type="submit" class="btn btn-primary center-block" id="save-comment" value="Guardar"> -->
             </form>
           </div>
         </div>
@@ -114,7 +126,6 @@ TODO Application
               Fecha:dd/mm/aaaa
             </div>
             <br>
-            <br>
             <div class="comment center-block">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis molestiae dolores adipisci ullam in. Alias, quas, vel
               explicabo odit ipsam cumque corrupti numquam deserunt magni distinctio aliquid doloribus fuga aliquam!
@@ -133,7 +144,6 @@ TODO Application
             <div class="date">
               Fecha:dd/mm/aaaa
             </div>
-            <br>
             <br>
             <div class="comment center-block">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis molestiae dolores adipisci ullam in. Alias, quas, vel
@@ -181,14 +191,14 @@ TODO Application
           <div class="faq">
             <div class="question">
               <div class="question-header">
-                Pregunta 1
+                <strong>Pregunta 1</strong>
               </div>
               <div class="question-body">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem adipisci quod nemo vitae cumque sit, iusto porro! Eligendi
                 nesciunt et amet numquam dolore voluptatem a maiores deleniti. Ex, cum ipsam.
               </div>
               <div class="response">
-                Respuesta
+                <strong>Respuesta</strong>
               </div>
               <div class="response-body">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere nisi perferendis sit, error placeat fuga neque quibusdam
@@ -196,7 +206,27 @@ TODO Application
               </div>
             </div>
             <div class="ask-btn">
-              <button type="button" class="btn btn-primary center-block">Preguntar</button>
+              <button type="button" class="btn btn-primary center-block" (click)="openModal(templateAsk)">Preguntar</button>
+
+              <!-- Using modal message -->
+
+              <ng-template #templateAsk>
+                <div class="modal-body text-center">
+                  <div class="modal-header">
+                    <h4 class="modal-title">¿Cuál es su pregunta?</h4>
+                  </div>
+                  <div class="form-group">
+                    <form action="">
+                      <textarea class="form-control" name="pregunta" id="pregunta" cols="30" rows="3" placeholder="Ingrese su pregunta..."></textarea>
+                      <br>
+                      <input type="submit" class="btn btn-primary center-block" (click)="confirm()" value="Guardar pregunta">
+                    </form>
+                  </div>
+                  
+                  <!-- <button type="button" class="btn btn-default" (click)="confirm()">Guardar pregunta</button> -->
+                </div>
+              </ng-template>
+              <!-- <button type="button" class="btn btn-primary center-block">Preguntar</button> -->
             </div>
           </div>
         </div>
