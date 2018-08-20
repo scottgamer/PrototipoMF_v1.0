@@ -3,6 +3,11 @@
 
 @media only screen and (min-width: 768px) {
     /* tablets and desktop */
+
+    .dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0; 
+     }
     .jumbotron p{
         font-size: 1em;
     }
@@ -97,6 +102,9 @@
     .col-md-12{
         padding-top: 15px;
         padding-bottom: 15px;
+    }
+    .applications-header{
+        margin-left: 38%;
     }
 
     .description{
@@ -195,7 +203,9 @@
         height: 55px;
         padding: 5px;
     }
-    
+    .applications-header{
+        margin-left: 15%;
+    }
     .inner-row-app {
         padding-top: 10px;
         padding-bottom: 10px;

@@ -1,3 +1,141 @@
 <p>
   TODO Pagina de aplicaciones
 </p>
+<!--Section-->
+<div class="row">
+  <div class="inner-row">
+    <div class="col-md-12">
+      <div class="applications-header">
+        <h4>Todas las aplicaciones</h4>
+      </div>
+
+    </div>
+  </div>
+  <!--Applications-->
+  <div class="inner-row">
+    <div class="col-md-4">
+      <div class="jumbotron">
+        <a href="/application">
+          <img class="logo" src="assets/images/logos/app1.webp" alt="">
+        </a>
+        <br>
+        <div class="info">
+          <small>Nombre: {{name}}</small>
+          <br>
+          <small>Categoría: {{category}}</small>
+          <br>
+          <small>Valoración: {{rating}} estrellas</small>
+          <br>
+          <a *ngFor="let item of starList; let i=index " (click)="setStar(i)">
+            <i *ngIf="item" class="fa fa-star-o"></i>
+            <i *ngIf="!item" class="fa fa-star"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="jumbotron">
+        <a href="/application">
+          <img class="logo" src="assets/images/logos/app1.webp" alt="">
+        </a>
+        <br>
+        <div class="info">
+          <small>Nombre: {{name}}</small>
+          <br>
+          <small>Categoría: {{category}}</small>
+          <br>
+          <small>Valoración: {{rating}} estrellas</small>
+          <br>
+          <a *ngFor="let item of starList; let i=index " (click)="setStar(i)">
+            <i *ngIf="item" class="fa fa-star-o"></i>
+            <i *ngIf="!item" class="fa fa-star"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="jumbotron">
+        <a href="/application">
+          <img class="logo" src="assets/images/logos/app1.webp" alt="">
+        </a>
+        <br>
+        <div class="info">
+          <small>Nombre: {{name}}</small>
+          <br>
+          <small>Categoría: {{category}}</small>
+          <br>
+          <small>Valoración: {{rating}} estrellas</small>
+          <br>
+          <a *ngFor="let item of starList; let i=index " (click)="setStar(i)">
+            <i *ngIf="item" class="fa fa-star-o"></i>
+            <i *ngIf="!item" class="fa fa-star"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- More applications -->
+  <div class="inner-row">
+    <div class="col-md-4">
+      <div class="jumbotron">
+        <a href="/application">
+          <img class="logo" src="assets/images/logos/app1.webp" alt="">
+        </a>
+        <br>
+        <div class="info">
+          <small>Nombre: {{name}}</small>
+          <br>
+          <small>Categoría: {{category}}</small>
+          <br>
+          <small>Valoración: {{rating}} estrellas</small>
+          <br>
+          <a *ngFor="let item of starList; let i=index " (click)="setStar(i)">
+            <i *ngIf="item" class="fa fa-star-o"></i>
+            <i *ngIf="!item" class="fa fa-star"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="jumbotron">
+        <a href="/application">
+          <img class="logo" src="assets/images/logos/app1.webp" alt="">
+        </a>
+        <br>
+        <div class="info">
+          <small>Nombre: {{name}}</small>
+          <br>
+          <small>Categoría: {{category}}</small>
+          <br>
+          <small>Valoración: {{rating}} estrellas</small>
+          <br>
+          <a *ngFor="let item of starList; let i=index " (click)="setStar(i)">
+            <i *ngIf="item" class="fa fa-star-o"></i>
+            <i *ngIf="!item" class="fa fa-star"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="jumbotron">
+        <a href="/application">
+          <img class="logo" src="assets/images/logos/app1.webp" alt="">
+        </a>
+        <br>
+        <div class="info">
+          <small>Nombre: {{name}}</small>
+          <br>
+          <small>Categoría: {{category}}</small>
+          <br>
+          <small>Valoración: {{rating}} estrellas</small>
+          <br>
+          <a *ngFor="let item of starList; let i=index " (click)="setStar(i)">
+            <i *ngIf="item" class="fa fa-star-o"></i>
+            <i *ngIf="!item" class="fa fa-star"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
