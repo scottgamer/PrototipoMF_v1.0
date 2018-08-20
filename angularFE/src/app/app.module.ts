@@ -15,6 +15,9 @@ import { ApplicationsComponent } from './components/applications/applications.co
 import { NewsComponent } from './components/news/news.component';
 import { EventsComponent } from './components/events/events.component';
 import { ApplicationComponent } from './components/application/application.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
+import { UserComponent } from './components/user/user.component';
 
 const appRoutes: Routes = [
   {path:'', component:HomeComponent},
@@ -22,7 +25,10 @@ const appRoutes: Routes = [
   {path:'applications', component:ApplicationsComponent},
   {path:'news', component:NewsComponent},
   {path:'events', component:EventsComponent},
-  {path:'application', component:ApplicationComponent}
+  {path:'application', component:ApplicationComponent},
+  {path:'login', component:LoginComponent},
+  {path:'register', component:RegisterComponent},
+  {path:'user', component:UserComponent}
 ];
 
 @NgModule({
@@ -32,7 +38,10 @@ const appRoutes: Routes = [
     HomeComponent,
     NewsComponent,
     EventsComponent,
-    ApplicationComponent
+    ApplicationComponent,
+    LoginComponent,
+    RegisterComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,

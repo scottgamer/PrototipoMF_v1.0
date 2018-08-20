@@ -8,6 +8,41 @@
         display: block;
         margin-top: 0; 
      }
+
+    .main-login{
+        margin-left: 25%;
+        margin-right: 25%;
+        padding: 5%;
+        border: solid rgb(205, 205, 205);
+    }
+    .no-account{
+        margin-left: 36%;
+    }
+
+    .main-register{
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .register-header{
+        margin: auto;
+        text-align: center;
+    }
+
+    .register-left, .register-right{
+        padding: 5%;
+    } 
+    .register-right{
+        margin-top: 25%;
+    }
+
+    .user{
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .user-header{
+        margin: auto;
+        text-align: center;
+    }
     .jumbotron p{
         font-size: 1em;
     }
@@ -206,6 +241,26 @@
     .applications-header{
         margin-left: 15%;
     }
+
+    .no-account{
+        margin-left: 36%;
+    }
+
+    .main-login{
+        padding: 5%;
+        border: solid rgb(205, 205, 205);
+    }
+
+    .register-header{
+        margin: auto;
+        text-align: center;
+    }
+
+    .register-left, .register-right{
+        padding: 5%;
+        border: solid rgb(205, 205, 205);
+    } 
+
     .inner-row-app {
         padding-top: 10px;
         padding-bottom: 10px;
