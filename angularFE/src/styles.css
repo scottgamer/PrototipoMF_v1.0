@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 
+  
 
 @media only screen and (min-width: 768px) {
     /* tablets and desktop */
@@ -40,9 +41,23 @@
         margin-right: 10%;
     }
     .user-header{
+        padding-bottom: 2%;
         margin: auto;
         text-align: center;
     }
+    .user-left{
+        padding: 5%;
+    }
+    .user-right{
+        margin: 5%;
+    }
+    .userprofile-image{
+        padding: 5%;
+    }
+    .user-info{
+        padding: 1%;
+    }
+    
     .jumbotron p{
         font-size: 1em;
     }

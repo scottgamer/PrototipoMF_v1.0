@@ -9,22 +9,60 @@
   <div class="row">
     <div class="col-md-4">
       <div class="user-left">
-        <div class="user-image">
+        <div class="userprofile-image">
           <i class="fa fa-user fa-5x"></i>
         </div>
         <div class="user-actions">
-          Usuario123
-          <hr>
-          <a href="#">Aplicaciones descargadas</a>
-          <hr>
-          <a href="#">Preguntas realizadas</a>
-          <hr>
-          <a href="#">Eventos guardados</a>
+
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#">Usuario123</a>
+              <hr>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Aplicaciones descargadas</a>
+              <hr>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Preguntas realizadas</a>
+              <hr>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Eventos guardados</a>
+            </li>
+          </ul>
+
         </div>
       </div>
-
     </div>
     <div class="col-md-8">
+      <div class="user-right">
+        <div class="user-info">
+          <label for="">Nombre:</label> {{fullName}}
+        </div>
+        <div class="user-info">
+          <label for="">Correo:</label> {{email}}
+        </div>
+        <div class="user-info">
+          <label for="">Contrasena:</label> {{password}}
+        </div>
+        <div class="user-info">
+          <label for="">Cumpleanios:</label> {{birthday}}
+        </div>
+        <div class="user-info">
+          <label for="">Género:</label> {{genre}}
+        </div>
+        <div class="user-info">
+          <label for="">Nacionalidad:</label> {{nationality}}
+        </div>
+        <div class="user-info">
+          <label for="">Biografía:</label>
+          <br> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci molestias iure eum totam necessitatibus modi,
+          reiciendis voluptate perspiciatis qui vero, magnam autem suscipit eos, omnis quis. Distinctio aperiam perspiciatis
+          temporibus!
+        </div>
+
+      </div>
 
     </div>
   </div>
