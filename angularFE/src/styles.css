@@ -1,5 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
-
+hr{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
   
 
 @media only screen and (min-width: 768px) {
@@ -50,9 +53,15 @@
     }
     .user-right{
         margin: 5%;
+        border-left: solid rgb(205, 205, 205);
+        padding-left: 5%;
     }
     .userprofile-image{
         padding: 5%;
+        margin-left: 30%;
+    }
+    .user-actions{
+        margin-top: 5%;
     }
     .user-info{
         padding: 1%;
@@ -327,6 +336,27 @@
     }
     .question-body, .response-body{
         padding: 5px;
+    }
+
+    .user{
+        margin: 5%;
+        padding: 5%;
+        border: solid rgb(205, 205, 205);
+    }
+    .user-header{
+        padding-bottom: 2%;
+        margin: auto;
+        text-align: center;
+    }
+    .user-right{
+        padding-top: 5%;
+        border-top: solid rgb(205, 205, 205);
+    }
+    .userprofile-image{
+        margin-left: 40%;
+    }
+    .user-info{
+        padding: 2%;
     }
 
 }

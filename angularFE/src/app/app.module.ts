@@ -1,6 +1,7 @@
 import { BrowserModule, Title } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes} from '@angular/router';
+import {FormsModule} from '@angular/forms';
 
 //import { AppBootstrapModule } from './app-bootstrap/app-bootstrap.module';
 //Bootstrap components using ngx-bootstrap
@@ -45,6 +46,7 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     BsDropdownModule.forRoot(),
     TooltipModule.forRoot(),
     ModalModule.forRoot(),

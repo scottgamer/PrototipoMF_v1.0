@@ -39,24 +39,60 @@
       <div class="user-right">
         <div class="user-info">
           <label for="">Nombre:</label> {{fullName}}
+          <span>
+            <i role="button" tooltip="Editar" class="fa fa-pencil" aria-hidden="true" (click)="editInfo(template)"></i>
+          </span>
+
+          <!-- Using modal message -->
+
+          <ng-template #template>
+            <div class="modal-body text-center">
+              <p>Editar campo</p>
+              <form action="">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Ingrese" [(ngModel)]="fullName" name="fullName">
+                </div>
+              </form>
+              <button type="button" class="btn btn-default" (click)="confirm()">Guardar</button>
+            </div>
+          </ng-template>
+
         </div>
         <div class="user-info">
           <label for="">Correo:</label> {{email}}
+          <span>
+            <i class="fa fa-pencil" aria-hidden="true"></i>
+          </span>
         </div>
         <div class="user-info">
           <label for="">Contrasena:</label> {{password}}
+          <span>
+            <i class="fa fa-pencil" aria-hidden="true"></i>
+          </span>
         </div>
         <div class="user-info">
-          <label for="">Cumpleanios:</label> {{birthday}}
+          <label for="">Cumpleanios:</label> {{birthdayDate}}
+          <span>
+            <i class="fa fa-pencil" aria-hidden="true"></i>
+          </span>
         </div>
         <div class="user-info">
           <label for="">Género:</label> {{genre}}
+          <span>
+            <i class="fa fa-pencil" aria-hidden="true"></i>
+          </span>
         </div>
         <div class="user-info">
           <label for="">Nacionalidad:</label> {{nationality}}
+          <span>
+            <i class="fa fa-pencil" aria-hidden="true"></i>
+          </span>
         </div>
         <div class="user-info">
           <label for="">Biografía:</label>
+          <span>
+            <i class="fa fa-pencil" aria-hidden="true"></i>
+          </span>
           <br> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci molestias iure eum totam necessitatibus modi,
           reiciendis voluptate perspiciatis qui vero, magnam autem suscipit eos, omnis quis. Distinctio aperiam perspiciatis
           temporibus!

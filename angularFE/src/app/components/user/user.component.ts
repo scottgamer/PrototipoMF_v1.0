@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TemplateRef } from '@angular/core';
+
+
+import { BsModalService } from 'ngx-bootstrap/modal';
+import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
 
 @Component({
   selector: 'app-user',
@@ -15,7 +19,9 @@ export class UserComponent implements OnInit {
   nationality:string;
   bio:string;
 
-  constructor() { 
+  modalRef: BsModalRef;
+
+  constructor(private modalService: BsModalService) { 
     
   }
 
@@ -29,7 +35,15 @@ export class UserComponent implements OnInit {
 
     console.log('se cargó');
     
-    
+  }
+
+  editInfo(template: TemplateRef<any>) {
+    this.modalRef = this.modalService.show(template, {class: 'modal-sm'});
+  }
+
+  confirm(): void {
+    // this.message = 'Confirmed!';
+    this.modalRef.hide();
   }
 
 }
