@@ -7,7 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewsComponent implements OnInit {
 
-  constructor() { }
+  headerTitle: string;
+  body: string;
+
+  constructor() {
+    this.headerTitle = 'Noticia 1';
+    this.body = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt aperiam voluptatem, distinctio assumenda rerum';
+  }
 
   ngOnInit() {
   }

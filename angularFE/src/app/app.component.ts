@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { Title }     from '@angular/platform-browser';
+import { Title } from '@angular/platform-browser';
+import { CollapseModule} from 'ngx-bootstrap/collapse'
 
 
 @Component({
@@ -8,16 +9,21 @@ import { Title }     from '@angular/platform-browser';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  
+  isCollapsed = true;
+
   title = 'Discapacidad Visual';
   name = "Aplicacion";
   category = "Baja visión"
   starList: boolean[] = [true, true, true, true, true];
   rating: number;
 
-  public constructor(private titleService: Title ) { }
- 
-  public setTitle( newTitle: string) {
-    this.titleService.setTitle( newTitle );
+  public constructor(private titleService: Title, private collapse:CollapseModule) { 
+    this.isCollapsed = true;
+  }
+
+  public setTitle(newTitle: string) {
+    this.titleService.setTitle(newTitle);
   }
 
   setStar(data: any) {
@@ -32,7 +38,7 @@ export class AppComponent {
     }
   }
 
-  ngOnInit(){
+  ngOnInit() {
     this.setTitle('Catalogo de Aplicaciones para Discapacidad Visual');
   }
 }

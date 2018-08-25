@@ -37,6 +37,7 @@ hr{
     } 
     .register-right{
         margin-top: 25%;
+        border-left: solid rgb(205, 205, 205);
     }
 
     .user{
@@ -109,7 +110,7 @@ hr{
     }
     .row{
         border: #cdcdcd medium solid;
-        margin-bottom: 5px;
+        margin-bottom: 25px;
         margin-top: 10px;
         width: 850px;
         margin:auto;
@@ -242,10 +243,41 @@ hr{
         padding: 5px;
     }
 
-
-    /* .fa-star {
-        color: red;
+    /*News Styles*/
+    .news-body{
+        padding: 1%;
+    }
+    /* .new-read-more{
+        margin-left: 80%;
     } */
+
+    /*New Styles*/
+    .new-header{
+        text-align: center;
+    }
+    .new-container{
+        display: inline-block;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 2%;
+        margin-bottom: 2%;
+        padding: 2%;
+        border: #cdcdcd solid;
+    }
+    .new-text{
+        padding: 1%;
+    }
+    .new-img-left{
+        width: 20%;
+        padding: 2%;
+        float: left;
+    }
+
+    .new-img-right{
+        width: 20%;
+        padding: 2%;
+        float: right;
+    }
 
 }
 
@@ -357,6 +389,40 @@ hr{
     }
     .user-info{
         padding: 2%;
+    }
+    /*News Styles*/
+    .row{
+        border: solid rgb(205, 205, 205);
+        padding: 2%;
+        margin: 1%;
+    }
+
+    /*New Styles*/
+    .new-header{
+        text-align: center;
+    }
+    .new-container{
+        display: inline-block;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 2%;
+        margin-bottom: 2%;
+        padding: 2%;
+        border: #cdcdcd solid;
+    }
+    .new-text{
+        padding: 1%;
+    }
+    .new-img-left{
+        width: 25%;
+        padding: 2%;
+        float: left;
+    }
+
+    .new-img-right{
+        width: 25%;
+        padding: 2%;
+        float: right;
     }
 
 }

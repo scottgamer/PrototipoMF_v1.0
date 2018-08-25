@@ -19,12 +19,14 @@ import { ApplicationComponent } from './components/application/application.compo
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { UserComponent } from './components/user/user.component';
+import { NewComponent } from './components/new/new.component';
 
 const appRoutes: Routes = [
   {path:'', component:HomeComponent},
   {path:'home', component:HomeComponent},
   {path:'applications', component:ApplicationsComponent},
   {path:'news', component:NewsComponent},
+  {path:'new', component:NewComponent},
   {path:'events', component:EventsComponent},
   {path:'application', component:ApplicationComponent},
   {path:'login', component:LoginComponent},
@@ -42,7 +44,8 @@ const appRoutes: Routes = [
     ApplicationComponent,
     LoginComponent,
     RegisterComponent,
-    UserComponent
+    UserComponent,
+    NewComponent
   ],
   imports: [
     BrowserModule,

@@ -4,10 +4,22 @@
 
     <!--Logo & brand name-->
     <div class="navbar-header">
-        <a class="navbar-brand" href="/"> <span> <img id="brand-image" src="assets/images/Logo.svg">
-          <img id="brand-image" src="assets/images/LogoTitulo.svg"></span></a>
-        <!--<span class="navbar-brand">Angular + Bootstrap</span>-->
-      </div>
+
+      <!-- Collpasible button -->
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" (click)="isCollapsed = !isCollapsed" aria-expanded="false">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <a class="navbar-brand" href="/">
+        <span>
+          <img id="brand-image" src="assets/images/Logo.svg">
+          <img id="brand-image" src="assets/images/LogoTitulo.svg">
+        </span>
+      </a>
+      <!--<span class="navbar-brand">Angular + Bootstrap</span>-->
+    </div>
 
     <!--Search bar-->
     <form id="search-bar" class="navbar-form navbar-left" action="#">
@@ -22,43 +34,67 @@
     </form>
 
     <!--Login & Help Buttons-->
-    <ul class="nav navbar-nav navbar-right">
-      <li><a href="/register"><span class="glyphicon glyphicon-user"></span> Regístrate</a></li>
-      <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Ingresa</a></li>
-      <li><a href="#"><span class="glyphicon glyphicon-question-sign"></span> Ayuda</a></li>
-    </ul>
+
+    <div class="collapse navbar-collapse" id="myNavbar" [collapse]="isCollapsed">
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a href="/register">
+            <span class="glyphicon glyphicon-user"></span> Regístrate</a>
+        </li>
+        <li>
+          <a href="/login">
+            <span class="glyphicon glyphicon-log-in"></span> Ingresa</a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="glyphicon glyphicon-question-sign"></span> Ayuda</a>
+        </li>
+      </ul>
+    </div>
   </div>
 </nav>
 
 <!--Secondary Navbar-->
 <nav class="navbar navbar-default">
-  <div class="container-fluid">  
+  <div class="container-fluid">
 
     <ul class="nav navbar-nav">
-      <li class="active"><a href="home">Home</a></li>
-      
+      <li class="active">
+        <a href="home">Home</a>
+      </li>
+
       <!--dropdown-->
       <li dropdown class="dropdown">
-        <a dropdownToggle role="button">Categorías 
-          <span class="caret"></span></a>
+        <a dropdownToggle role="button">Categorías
+          <span class="caret"></span>
+        </a>
         <ul *dropdownMenu class="dropdown-menu">
-          <li><a href="#">Baja Visión</a></li>
-          <li><a href="#">Ceguera</a></li>
+          <li>
+            <a href="#">Baja Visión</a>
+          </li>
+          <li>
+            <a href="#">Ceguera</a>
+          </li>
         </ul>
       </li>
 
-      <li><a href="applications">Aplicaciones</a></li>
-      <li><a href="news">Noticias</a></li>
-      <li><a href="events">Eventos</a></li>
+      <li>
+        <a href="applications">Aplicaciones</a>
+      </li>
+      <li>
+        <a href="news">Noticias</a>
+      </li>
+      <li>
+        <a href="events">Eventos</a>
+      </li>
     </ul>
   </div>
 </nav>
 <br>
 
-  <!-- <div style="text-align:center">
+<!-- <div style="text-align:center">
     <h1>Catálogo de Aplicaciones para {{ title }}</h1>
   </div> -->
 
 
-  <router-outlet></router-outlet>
- 
+<router-outlet></router-outlet>
