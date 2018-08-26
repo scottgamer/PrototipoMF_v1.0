@@ -32,7 +32,6 @@ TODO Application
       <div class="inner-row-app" id="screenshots">
         <h4>Screenshots</h4>
         <div class="col-md-12">
-
           <div class="col-md-4">
             <img src="assets/images/carousel/ca1.webp" alt="">
           </div>
@@ -43,8 +42,23 @@ TODO Application
             <img src="assets/images/carousel/ca3.webp" alt="">
           </div>
         </div>
-
       </div>
+
+      <div class="inner-row-app" id="screenshots-carousel">
+        <h4>Screenshots</h4>
+        <carousel>
+          <slide>
+            <img src="assets/images/carousel/ca1.webp" alt="first slide" style="display: block; width: 100%;">
+          </slide>
+          <slide>
+            <img src="assets/images/carousel/ca2.webp" alt="second slide" style="display: block; width: 100%;">
+          </slide>
+          <slide>
+            <img src="assets/images/carousel/ca3.webp" alt="third slide" style="display: block; width: 100%;">
+          </slide>
+        </carousel>
+      </div>
+
 
       <!-- Description -->
       <div class="inner-row-app">
@@ -219,10 +233,10 @@ TODO Application
                     <form action="">
                       <textarea class="form-control" name="pregunta" id="pregunta" cols="30" rows="3" placeholder="Ingrese su pregunta..."></textarea>
                       <br>
-                      <input type="submit" class="btn btn-primary center-block" (click)="confirm()" value="Guardar pregunta">
+                      <input type="submit" class="btn btn-primary center-block" (click)="confirmModal()" value="Guardar pregunta">
                     </form>
                   </div>
-                  
+
                   <!-- <button type="button" class="btn btn-default" (click)="confirm()">Guardar pregunta</button> -->
                 </div>
               </ng-template>

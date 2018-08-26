@@ -59,8 +59,14 @@ export class ApplicationComponent implements OnInit {
     this.modalRef = this.modalService.show(template, {class: 'modal-sm'});
   }
 
-  confirm(): void {
-    // this.message = 'Confirmed!';
+  confirm(template: TemplateRef<any>): void {
+    //this.message = 'Confirmed!';
+    this.modalRef.hide();
+  }
+
+  confirmModal(): void {
+    //this.message = 'Confirmed!';
+    alert('Pregunta guardada!');
     this.modalRef.hide();
   }
 }

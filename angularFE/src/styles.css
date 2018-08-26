@@ -135,6 +135,10 @@ hr{
 
     }
 
+    #screenshots-carousel{
+        display: none;
+    }
+
     .container .jumbotron{
         padding:15px;
     }
@@ -300,21 +304,35 @@ hr{
         width: 24%;
     }
     /* .simple-row{
-        margin: 2%;
+        border: solid;
     } */
     #event-centered{
         text-align: center; 
+        border-top: solid rgb(205, 205, 205);
     }
     #event-justified{
         text-align: justify;
     }
-
 
 }
 
 @media only screen and (max-width: 768px) {
     /* phones */
 
+    .logo{
+        padding-top: -5px;
+        padding-left: 10%;
+        width: 55%;
+    }
+
+    #screenshots{
+        display:none;
+    }
+
+    #screenshots-carousel{
+        padding-top: 10px;
+        padding-left: 20px;
+    }
     .navbar-brand{
         padding-top: 10px;
         height: 70px;
@@ -353,7 +371,7 @@ hr{
         padding-bottom: 10px;
         padding-left: 10px;
         padding-right: 10px;
-        border: solid;
+        border-bottom: solid rgb(141, 141, 141);
         height: 100%;
     }
 
@@ -363,11 +381,12 @@ hr{
 
     .info{
         padding-top: 5px;
-        padding-left: 30px;
+        padding-left: 10%;
         font-size: 1.2em;
     }
     .col-md-4{
-        padding-top: 10px;
+        /* padding-top: 10px; */
+        padding-top: 5px;
         align-items: center;
     }
 
@@ -385,10 +404,15 @@ hr{
     }
     .user-comment{
         padding-bottom: 5px;
+        border-bottom: solid rgb(141, 141, 141);
+        margin-bottom: 5px; 
     }
 
     .comment{
         padding-bottom: 5px;
+    }
+    #comment{
+        margin-bottom: 5px;
     }
     .question{
         padding-top: 5px;
@@ -476,13 +500,19 @@ hr{
         width: 24%;
     }
     /* .simple-row{
-        margin: 2%;
+        border: solid;
     } */
     #event-centered{
         text-align: center;
+        border-bottom: solid rgb(205, 205, 205);
+        margin-bottom: 3px;
     }
     #event-justified{
         text-align: justify;   
+    }
+    h4{
+        margin-top: 5px;
+        margin-bottom: 5px;
     }
     
 }
