@@ -20,6 +20,7 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { UserComponent } from './components/user/user.component';
 import { NewComponent } from './components/new/new.component';
+import { EventComponent } from './components/event/event.component';
 
 const appRoutes: Routes = [
   {path:'', component:HomeComponent},
@@ -28,6 +29,7 @@ const appRoutes: Routes = [
   {path:'news', component:NewsComponent},
   {path:'new', component:NewComponent},
   {path:'events', component:EventsComponent},
+  {path:'event', component:EventComponent},
   {path:'application', component:ApplicationComponent},
   {path:'login', component:LoginComponent},
   {path:'register', component:RegisterComponent},
@@ -45,7 +47,8 @@ const appRoutes: Routes = [
     LoginComponent,
     RegisterComponent,
     UserComponent,
-    NewComponent
+    NewComponent,
+    EventComponent
   ],
   imports: [
     BrowserModule,
