@@ -16,11 +16,11 @@
 
           <ul class="nav flex-column">
             <li class="nav-item">
-              <a class="nav-link disabled" href="#">Usuario123</a>
+              Usuario123
               <hr>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Aplicaciones descargadas</a>
+              <a class="nav-link" (click)='openModalApps(templateApps)' [routerLink]="">Aplicaciones descargadas</a>
               <hr>
             </li>
             <li class="nav-item">
@@ -31,6 +31,28 @@
               <a class="nav-link" href="#">Eventos guardados</a>
             </li>
           </ul>
+
+          <!-- Ng Templates -->
+
+          <ng-template #templateApps>
+            <div class="modal-header">
+              <h4 class="modal-title pull-left">Modal</h4>
+              <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="modal-row" *ngFor="let app of apps" >
+                <div class="user-apps-history-left">
+                  <img class="user-apps-img" src="assets/images/logos/{{app.img}}" alt="">
+                </div>
+                <div class="user-apps-history-right">
+                  {{app.name}} {{app.category}} {{app.starList}} {{rating}}
+                </div>
+              </div>
+            </div>
+          </ng-template>
+
 
         </div>
       </div>

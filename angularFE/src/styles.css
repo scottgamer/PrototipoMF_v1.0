@@ -63,6 +63,7 @@ hr{
     }
     .user-actions{
         margin-top: 5%;
+        text-align: center;
     }
     .user-info{
         padding: 1%;
@@ -312,6 +313,27 @@ hr{
     }
     #event-justified{
         text-align: justify;
+    }
+
+    /* Modals */
+    .modal-row{
+        width: 100%;
+        border: solid rgb(205, 205, 205);
+        padding: 1%;
+        margin: 1%;
+        display: inline-block;
+    }
+    .user-apps-history-left{
+        width: 45%;
+        float: left;
+    }
+    
+    .user-apps-history-right{
+        width: 45%;
+        float: right;
+    }
+    .user-apps-img{
+        width: 25%;
     }
 
 }
