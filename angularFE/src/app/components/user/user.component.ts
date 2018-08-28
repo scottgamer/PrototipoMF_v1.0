@@ -21,9 +21,38 @@ export class UserComponent implements OnInit {
   modalRef: BsModalRef;
 
   apps: Application[];
+  questions: Question[];
+  responses: Response[];
+
+  lorem: string = 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' +
+    ' Eius temporibus veniam sed autem dolorem eligendi' +
+    'iure quo repellendus itaque adipisci voluptatibus odio quod,' +
+    ' repellat corrupti quae perspiciatis accusamus.';
 
   constructor(private modalService: BsModalService) {
     this.apps = [];
+
+    this.questions = [
+      {
+        body: this.lorem,
+        date: 'dd/mm/aaaa',
+        responseCount: 2,
+        responses: [
+          {
+            responseId: 1,
+            responseBody: this.lorem,
+            date: 'dd/mm/aaaa'
+          },
+          {
+            responseId: 2,
+            responseBody: this.lorem,
+            date: 'dd/mm/aaaa'
+          }
+        ]
+
+
+      }
+    ];
 
     /* this.apps = [
       {
@@ -42,7 +71,7 @@ export class UserComponent implements OnInit {
 
     for (var i = 1; i < 4; i++) {
       this.apps.push({
-        name: 'app ' + i,
+        name: 'Aplicación ' + i,
         img: 'app' + i + '.webp',
         category: 'Categoria 1',
         starList: [true, true, true, true, true],
@@ -70,7 +99,7 @@ export class UserComponent implements OnInit {
     this.modalRef.hide();
   }
 
-  openModalApps(template: TemplateRef<any>) {
+  openModal(template: TemplateRef<any>) {
     this.modalRef = this.modalService.show(template);
     console.log('abre modal');
   }
@@ -80,10 +109,23 @@ export class UserComponent implements OnInit {
 
 interface Application {
   name: string,
-  img:string,
+  img: string,
   category: string,
   starList: boolean[],
   rating: number
+}
+
+interface Question {
+  body: string,
+  date: string,
+  responseCount: number,
+  responses: Response[]
+}
+
+interface Response {
+  responseId: number,
+  responseBody: string,
+  date: string
 }
 
 /* interface Application {

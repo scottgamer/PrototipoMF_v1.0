@@ -20,11 +20,11 @@
               <hr>
             </li>
             <li class="nav-item">
-              <a class="nav-link" (click)='openModalApps(templateApps)' [routerLink]="">Aplicaciones descargadas</a>
+              <a class="nav-link" (click)='openModal(templateApps)' [routerLink]="">Aplicaciones descargadas</a>
               <hr>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Preguntas realizadas</a>
+              <a class="nav-link" (click)='openModal(templateQuestions)' [routerLink]="">Preguntas realizadas</a>
               <hr>
             </li>
             <li class="nav-item">
@@ -33,21 +33,94 @@
           </ul>
 
           <!-- Ng Templates -->
-
+          <!-- Applications history -->
           <ng-template #templateApps>
             <div class="modal-header">
-              <h4 class="modal-title pull-left">Modal</h4>
+              <h4 class="modal-title pull-left">Aplicaciones descargadas</h4>
               <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
             <div class="modal-body">
-              <div class="modal-row" *ngFor="let app of apps" >
+              <div class="modal-row" *ngFor="let app of apps">
                 <div class="user-apps-history-left">
                   <img class="user-apps-img" src="assets/images/logos/{{app.img}}" alt="">
                 </div>
                 <div class="user-apps-history-right">
-                  {{app.name}} {{app.category}} {{app.starList}} {{rating}}
+                  Nombre: {{app.name}}
+                  <br> Categoría: {{app.category}}
+                  <br> Valoración: {{app.starList}} {{rating}}
+                  <br>
+                  <a href="/application">
+                    <button role="button" class="btn btn-success center-block" tooltip='Ver aplicación'> Ver </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+
+          <!-- Questions made -->
+          <ng-template #templateQuestions>
+            <div class="modal-header">
+              <h4 class="modal-title pull-left">Preguntas realizadas</h4>
+              <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="modal-row" *ngFor="let question of questions">
+                <div class="user-questions-responses">
+                  <strong>Respuestas:</strong>
+                  <br> 1
+                </div>
+                <div class="user-questions-question">
+                  <div class="user-question-header">
+                    <strong>Pregunta: </strong>
+                  </div>
+                  <div class="user-question-body">
+                    {{question.body}}
+                  </div>
+                  <button role="button" class="btn btn-success center-block" tooltip='Ver pregunta' (click)='openModal(templateResponses)'>
+                    Ver </button>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+
+          <!-- Responses per Question -->
+          <ng-template #templateResponses>
+            <div class="modal-header">
+              <h4 class="modal-title pull-left">Respuestas obtenidas</h4>
+              <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="modal-row" *ngFor="let question of questions">
+                <div class="response-container">
+                  <div class="response-question-header">
+                    <strong>Pregunta: </strong>
+                  </div>
+                  <div class="response-question-body">
+                    {{question.body}}
+                  </div>
+                  <div class="response-responses-header">
+                    <strong>Todas las respuestas: {{question.responseCount}}</strong>
+                  </div>
+                  <div *ngFor="let question of questions">
+                    <div class="response-responses" *ngFor="let response of question.responses">
+                      <div class="response-responses-id">
+                        <strong>Respuesta {{response.responseId}}</strong> 
+                      </div>
+                      <div class="response-responses-body">
+                        {{response.responseBody}}
+                      </div>
+                      <div class="response-responses-user pull-right">
+                        Respondió: Usuario123
+                        <br> Fecha: {{response.date}}
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
