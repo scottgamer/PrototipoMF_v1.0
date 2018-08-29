@@ -28,7 +28,7 @@
               <hr>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Eventos guardados</a>
+              <a class="nav-link" (click)='openModal(templateEvents)' [routerLink]="">Eventos guardados</a>
             </li>
           </ul>
 
@@ -110,7 +110,7 @@
                   <div *ngFor="let question of questions">
                     <div class="response-responses" *ngFor="let response of question.responses">
                       <div class="response-responses-id">
-                        <strong>Respuesta {{response.responseId}}</strong> 
+                        <strong>Respuesta {{response.responseId}}</strong>
                       </div>
                       <div class="response-responses-body">
                         {{response.responseBody}}
@@ -120,6 +120,31 @@
                         <br> Fecha: {{response.date}}
                       </div>
                     </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+
+          <!-- Saved events -->
+          <ng-template #templateEvents>
+            <div class="modal-header">
+              <h4 class="modal-title pull-left">Eventos guardados</h4>
+              <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="modal-row" *ngFor="let app of apps">
+                <div class="events-container">
+                  <div class="events-header">
+                    <h4>Evento 1</h4>
+                  </div>
+                  <img class="events-img" src="assets/images/events/event1.PNG" alt="">
+                  <div class="events-btn-more">
+                    <a href="/event">
+                      <button role="button" class="btn btn-info pull-right">Más información</button>
+                    </a>
                   </div>
                 </div>
               </div>

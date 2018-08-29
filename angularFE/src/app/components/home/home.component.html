@@ -18,11 +18,10 @@
           <div class="info">
             <small>Nombre: {{name}}</small><br>
             <small>Categoría: {{category}}</small><br>
-            <small>Valoración: {{rating}} estrellas</small><br>
-            <a *ngFor="let item of starList; let i=index " (click)="setStar(i)">
-                <i *ngIf="item" class="fa fa-star-o"></i>
-                <i *ngIf="!item" class="fa fa-star"></i>
-              </a>
+            <small>Valoración: 
+              <bar-rating [(rate)]="rate" [max]="5" [theme]="'default'"></bar-rating>
+              <bar-rating [(rate)]="rate" [max]="5" [theme]="'default'"></bar-rating> </small><br>
+            
           </div>
         </div>    
       </div>
@@ -56,4 +55,8 @@
       </div>
     </div>   
   </div>
+
+  Bar rating
+  <bar-rating [(rate)]="rate" [max]="5" [theme]="'default'"></bar-rating>
+  <bar-rating [(rate)]="rate" [max]="5"></bar-rating>
  

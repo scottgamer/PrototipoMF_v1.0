@@ -11,6 +11,8 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 
+import { BarRatingModule } from "ngx-bar-rating";
+
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { ApplicationsComponent } from './components/applications/applications.component';
@@ -59,6 +61,7 @@ const appRoutes: Routes = [
     ModalModule.forRoot(),
     CollapseModule.forRoot(),
     CarouselModule.forRoot(),
+    BarRatingModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { BarRatingModule } from "ngx-bar-rating";
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -12,7 +14,9 @@ export class HomeComponent implements OnInit {
   starList: boolean[] = [true, true, true, true, true];
   rating: number;
 
-  public constructor() { }
+  rate:number=3;
+
+  public constructor(private barRatingModule:BarRatingModule) { }
 
   setStar(data: any) {
     this.rating = data + 1;
