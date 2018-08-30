@@ -72,6 +72,9 @@ hr{
     .jumbotron p{
         font-size: 1em;
     }
+    .jumbotron{
+        margin: 5%;
+    }
     body{
         font-size: 1.6em;
     }
@@ -133,7 +136,6 @@ hr{
         /* height: 334.8px; */
         padding-top: 10px;
         padding-left: 20px;
-
     }
 
     #screenshots-carousel{
@@ -141,16 +143,21 @@ hr{
     }
 
     .container .jumbotron{
-        padding:15px;
+        padding: 10px; 
+        padding-bottom: 0px;
     }
 
+    /* Before using bar-star */
+    /* .container .jumbotron{
+        padding:15px;
+    } */
     
     #application{
         margin-bottom: 0px;
     }
     
     .info{
-        padding-top: 25px;
+        /* padding-top: 25px; */
         padding-left:5px;
         font-size: 1.2em;
     }
@@ -372,7 +379,18 @@ hr{
     .response-responses-user{
         margin: 1%;
     }
-    
+    .br[_ngcontent-c2]{
+        margin: 0px;
+        display: inline-block;
+    }
+    /* .info-rating{
+        display: inline-block;
+    } */
+    .info-rating{
+        margin-top: 3px;
+        border-top: solid rgb(205, 205, 205);
+        height: 40px;
+    }
 }
 
 @media only screen and (max-width: 768px) {

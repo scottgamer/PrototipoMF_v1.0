@@ -3,12 +3,19 @@ import { Component, OnInit, TemplateRef } from '@angular/core';
 import { BsModalService } from 'ngx-bootstrap/modal';
 import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
 
+
+import { Application } from '../../models/application-model';
+
 @Component({
   selector: 'app-application',
   templateUrl: './application.component.html',
   styleUrls: ['./application.component.css']
 })
 export class ApplicationComponent implements OnInit {
+
+  //using application-model
+  application:Application;
+
 
   name = "Aplicacion";
   category = "Baja visión"
