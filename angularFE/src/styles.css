@@ -153,13 +153,21 @@ hr{
     } */
     
     #application{
-        margin-bottom: 0px;
+        margin: 0px;
+        /* margin-bottom: 0px; */
     }
     
     .info{
         /* padding-top: 25px; */
         padding-left:5px;
         font-size: 1.2em;
+    }
+
+    .info-app{
+        /* padding-top: 25px; */
+        padding-top: 15%;
+        /* padding-left:5px; */
+        /* font-size: 1.2em; */
     }
 
     #btn-download{
@@ -223,15 +231,12 @@ hr{
         padding-right: 30%;   
     }
     .comment{
-        clear: right;
+        clear: left;
         width: 90%;
         padding: 5px;        
     }
     .more-comments{
         padding: 5px;
-    }
-    .read-more-comment{
-        /* float: right; */
     }
     .left-pane{
         float: left;
@@ -250,9 +255,13 @@ hr{
     }
     .question{
         padding: 10px;
+        border-bottom: solid rgb(205, 205, 205);
     }
     .question-body, .response-body{
         padding: 5px;
+    }
+    .ask-btn{
+        margin: 1%;
     }
 
     /*News Styles*/
@@ -398,7 +407,7 @@ hr{
 
     .logo{
         padding-top: -5px;
-        padding-left: 10%;
+        /* padding-left: 10%; */
         width: 55%;
     }
 
@@ -468,8 +477,9 @@ hr{
     }
 
     #btn-download{
+        margin-top: 5px;
         padding-top: 5px;
-        padding-left: 40px;
+        /* padding-left: 40px; */
     }
 
     #btn-more{
@@ -591,13 +601,13 @@ hr{
         margin-top: 5px;
         margin-bottom: 5px;
     }
-    
+    .br[_ngcontent-c2]{
+        margin: 0px;
+        display: inline-block;
+    }
+    .info-rating{
+        margin-top: 3px;
+        border-top: solid rgb(205, 205, 205);
+        height: 40px;
+    }    
 }
-
-/* for large screens and up */
-/* @media only screen and (min-width: 63em) {
-    
-}
- */
-/*@media (min-width: 768px){  
-} */

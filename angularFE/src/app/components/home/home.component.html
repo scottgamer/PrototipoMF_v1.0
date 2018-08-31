@@ -15,8 +15,9 @@
   <div class="inner-row">
     <div class="col-md-4" *ngFor='let application of applications'>
       <div class="jumbotron">
-        <a href="/application">
-          <img class="logo center-block" src="{{application.img}}" alt="">
+        <!-- <a href="/application"> -->
+          <a role="button" (click)='onSelect(application)'>
+          <img class="logo center-block" src="{{application.logo}}" alt="" >
         </a>
         <br>
         <div class="info">
@@ -33,11 +34,12 @@
         </div>
       </div>
     </div>
-
   </div>
 
 </div>
 
-Bar rating
+<app-application [application]="selectedApplication"></app-application>
+
+<!-- Bar rating
 <bar-rating [(rate)]="rate" [max]="5" [theme]="'default'"></bar-rating>
-<bar-rating [(rate)]="rate" [max]="5"></bar-rating>
+<bar-rating [(rate)]="rate" [max]="5"></bar-rating> -->
