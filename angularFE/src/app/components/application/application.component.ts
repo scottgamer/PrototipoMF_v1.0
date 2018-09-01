@@ -15,10 +15,10 @@ import { Question } from '../../models/questions-model';
 })
 export class ApplicationComponent implements OnInit {
   
-  @Input() application: Application; 
+  //@Input() application: Application; 
 
   //using application-model
-  //application: Application;
+  application: Application;
   questions: Question[];
 
   half1: string;
@@ -34,13 +34,13 @@ export class ApplicationComponent implements OnInit {
   message: string;
 
   constructor(private modalService: BsModalService, private barRatingModule: BarRatingModule) {
-    //this.loadApplicationData();
-    //this.application;
+    this.loadApplicationData();
+    this.application;
   }
 
   ngOnInit() {
     this.messageBtn = 'Leer más';
-    //this.getHalfString();
+    this.getHalfString();
     this.loadQuestions();
   }
 

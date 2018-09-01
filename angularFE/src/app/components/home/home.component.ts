@@ -1,12 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 
+//modules
 import { BarRatingModule } from "ngx-bar-rating";
-
+//classes
 import { Application } from '../../models/application-model';
+//services
+import { ApplicationService } from '../../services/application.service';
 
 
 @Component({
   selector: 'app-home',
+  providers: [ApplicationService],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
@@ -20,12 +24,19 @@ export class HomeComponent implements OnInit {
 
   selectedApplication:Application;
 
-  public constructor(private barRatingModule: BarRatingModule) {
+  public constructor(private barRatingModule: BarRatingModule, private appService:ApplicationService) {
 
   }
 
   ngOnInit() {
-    this.loadApplications();
+    this.getApplications();
+    //this.loadApplications();
+    
+  }
+
+  getApplications(): void {
+    this.appService.getApplications()
+        .subscribe(applications => this.applications = applications);
   }
 
   loadApplications() {

@@ -400,6 +400,15 @@ hr{
         border-top: solid rgb(205, 205, 205);
         height: 40px;
     }
+
+    .error-page{
+        padding: 5%;
+        text-align: center;
+        font-size: 1.6em;
+    }
+    .error-body{
+        width: 70%;
+    }
 }
 
 @media only screen and (max-width: 768px) {
@@ -610,4 +619,13 @@ hr{
         border-top: solid rgb(205, 205, 205);
         height: 40px;
     }    
+
+    .error-page{
+        padding: 5%;
+        text-align: center;
+        font-size: 1.6em;
+    }
+    .error-body{
+        width: 70%;
+    }
 }

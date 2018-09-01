@@ -24,6 +24,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { UserComponent } from './components/user/user.component';
 import { NewComponent } from './components/new/new.component';
 import { EventComponent } from './components/event/event.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 const appRoutes: Routes = [
   {path:'', component:HomeComponent},
@@ -36,7 +37,8 @@ const appRoutes: Routes = [
   {path:'application', component:ApplicationComponent},
   {path:'login', component:LoginComponent},
   {path:'register', component:RegisterComponent},
-  {path:'user', component:UserComponent}
+  {path:'user', component:UserComponent},
+  { path: '**', component: PageNotFoundComponent }
 ];
 
 @NgModule({
@@ -51,7 +53,8 @@ const appRoutes: Routes = [
     RegisterComponent,
     UserComponent,
     NewComponent,
-    EventComponent
+    EventComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
