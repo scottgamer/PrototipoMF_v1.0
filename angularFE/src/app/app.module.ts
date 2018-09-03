@@ -33,12 +33,13 @@ const appRoutes: Routes = [
   {path:'news', component:NewsComponent},
   {path:'new', component:NewComponent},
   {path:'events', component:EventsComponent},
-  {path:'event', component:EventComponent},
-  {path:'application', component:ApplicationComponent},
+  {path:'event/:id', component:EventComponent},
+  {path:'application/:id', component:ApplicationComponent},
   {path:'login', component:LoginComponent},
   {path:'register', component:RegisterComponent},
   {path:'user', component:UserComponent},
-  { path: '**', component: PageNotFoundComponent }
+  { path: '**', component: PageNotFoundComponent },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
 ];
 
 @NgModule({

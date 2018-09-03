@@ -1,6 +1,7 @@
 import { Commentary } from "./commentaries-model";
 
 export class Application {
+    id:number;
     name:string;
     logo:string;
     imgs:string[];

@@ -3,29 +3,27 @@
 </p>
 
 <div class="row">
-  <div class="simple-row">
+  <div class="simple-row" >
     <div class="col-md-12">
-      <img class="event-big-img" src="assets/images/events/event1.PNG" alt="">
+      <img class="event-big-img" src="{{event.img}}" alt="">
     </div>
   </div>
   <div class="simple-row">
     <div class="col-md-8" id="event-centered">
-      <h3>Evento 1</h3>
-      <h4>Fecha: dd/mm/aaaa</h4>
+      <h3>{{event.name}}</h3>
+      <h4>Fecha: {{event.date}}</h4>
     </div>
     <div class="col-md-4" id="event-centered">
       <h4>Organizado por:</h4>
 
-      <img class="event-organized-by-img" src="assets/images/events/organizers/organizer1.PNG" alt="">
+      <img class="event-organized-by-img" src="{{event.organizerImg}}" alt="{{event.organizedBy}}">
     </div>
   </div>
   <div class="simple-row">
     <div class="col-md-8" id="event-centered">
       <h4>Descripción</h4>
 
-      <p id="event-justified">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio neque dolorum necessitatibus, omnis amet assumenda.
-        Perspiciatis non, inventore corrupti deleniti recusandae vero, explicabo tenetur facilis id adipisci nulla, velit
-        sit!
+      <p id="event-justified">{{event.description}}
       </p>
     </div>
     <div class="col-md-4" id="event-centered">

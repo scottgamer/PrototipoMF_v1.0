@@ -2,9 +2,10 @@ import { Application } from '../../models/application-model';
 
 export const APPLICATIONS: Application[] = [
     {
+        id:1,
         name: 'Aplicacion demo 1',
         logo: 'assets/images/logos/app1.webp',
-        imgs: ['assets/images/carousel/ca1.webp', 'assets/images/carousel/ca2.webp', 'assets/images/carousel/ca3.webp'],
+        imgs: ['assets/images/carousel/app1/img1.webp', 'assets/images/carousel/app1/img2.webp', 'assets/images/carousel/app1/img3.webp'],
         category: 'Baja visión',
         description: 'Eye-D (Acronym for Eye Devices), conceptualized as standalone solution to improve quality of life' +
             ' of visually impaired (VI) is a complete solution that assists VI’s in their daily life.' +
@@ -36,10 +37,11 @@ export const APPLICATIONS: Application[] = [
         }],
     },
     {
+        id:2,
         name: 'Aplicacion demo 2',
         logo: 'assets/images/logos/app2.webp',
-        imgs: ['assets/images/carousel/ca1.webp', 'assets/images/carousel/ca2.webp', 'assets/images/carousel/ca3.webp'],
-        category: 'Baja visión',
+        imgs: ['assets/images/carousel/app2/img1.webp', 'assets/images/carousel/app2/img2.webp', 'assets/images/carousel/app2/img3.webp'],
+        category: 'Ceguera',
         description: 'Eye-D (Acronym for Eye Devices), conceptualized as standalone solution to improve quality of life' +
             ' of visually impaired (VI) is a complete solution that assists VI’s in their daily life.' +
             'Eye-D helps visually impaired be location aware, explore and navigate to nearby places of interest, ' +
@@ -70,10 +72,11 @@ export const APPLICATIONS: Application[] = [
         }],
     },
     {
+        id:3,
         name: 'Aplicacion demo 3',
         logo: 'assets/images/logos/app3.webp',
-        imgs: ['assets/images/carousel/ca1.webp', 'assets/images/carousel/ca2.webp', 'assets/images/carousel/ca3.webp'],
-        category: 'Baja visión',
+        imgs: ['assets/images/carousel/app3/img1.webp', 'assets/images/carousel/app3/img2.webp','assets/images/carousel/app3/img3.webp'],
+        category: 'Ceguera',
         description: 'Eye-D (Acronym for Eye Devices), conceptualized as standalone solution to improve quality of life' +
             ' of visually impaired (VI) is a complete solution that assists VI’s in their daily life.' +
             'Eye-D helps visually impaired be location aware, explore and navigate to nearby places of interest, ' +

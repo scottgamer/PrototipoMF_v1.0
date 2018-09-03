@@ -13,63 +13,24 @@
   </div>
   <!--Applications-->
   <div class="inner-row">
-    <div class="col-md-4">
+    <div class="col-md-4" *ngFor='let application of applications'>
       <div class="jumbotron">
-        <a href="/application">
-          <img class="logo center-block" src="assets/images/logos/app1.webp" alt="">
+        <a routerLink="/application/{{application.id}}">
+          <!-- <a role="button" (click)='onSelect(application)'> -->
+          <img class="logo center-block" src="{{application.logo}}" alt="">
         </a>
         <br>
         <div class="info">
-          <small>Nombre: {{name}}</small>
+          <small>Nombre: {{application.name}}</small>
           <br>
-          <small>Categoría: {{category}}</small>
+          <small>Categoría: {{application.category}}</small>
           <br>
-          <small>Valoración: {{rating}} estrellas</small>
+          <div class="info-rating">
+            <small>Valoración:
+              <bar-rating [(rate)]="application.rating" [max]="5" [theme]="'default'"></bar-rating>
+            </small>
+          </div>
           <br>
-          <a *ngFor="let item of starList; let i=index " (click)="setStar(i)">
-            <i *ngIf="item" class="fa fa-star-o"></i>
-            <i *ngIf="!item" class="fa fa-star"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="jumbotron">
-        <a href="/application">
-          <img class="logo center-block" src="assets/images/logos/app1.webp" alt="">
-        </a>
-        <br>
-        <div class="info">
-          <small>Nombre: {{name}}</small>
-          <br>
-          <small>Categoría: {{category}}</small>
-          <br>
-          <small>Valoración: {{rating}} estrellas</small>
-          <br>
-          <a *ngFor="let item of starList; let i=index " (click)="setStar(i)">
-            <i *ngIf="item" class="fa fa-star-o"></i>
-            <i *ngIf="!item" class="fa fa-star"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="jumbotron">
-        <a href="/application">
-          <img class="logo center-block" src="assets/images/logos/app1.webp" alt="">
-        </a>
-        <br>
-        <div class="info">
-          <small>Nombre: {{name}}</small>
-          <br>
-          <small>Categoría: {{category}}</small>
-          <br>
-          <small>Valoración: {{rating}} estrellas</small>
-          <br>
-          <a *ngFor="let item of starList; let i=index " (click)="setStar(i)">
-            <i *ngIf="item" class="fa fa-star-o"></i>
-            <i *ngIf="!item" class="fa fa-star"></i>
-          </a>
         </div>
       </div>
     </div>
@@ -77,63 +38,24 @@
 
   <!-- More applications -->
   <div class="inner-row">
-    <div class="col-md-4">
+    <div class="col-md-4" *ngFor='let application of applications'>
       <div class="jumbotron">
-        <a href="/application">
-          <img class="logo" src="assets/images/logos/app1.webp" alt="">
+        <a routerLink="/application/{{application.id}}">
+          <!-- <a role="button" (click)='onSelect(application)'> -->
+          <img class="logo center-block" src="{{application.logo}}" alt="">
         </a>
         <br>
         <div class="info">
-          <small>Nombre: {{name}}</small>
+          <small>Nombre: {{application.name}}</small>
           <br>
-          <small>Categoría: {{category}}</small>
+          <small>Categoría: {{application.category}}</small>
           <br>
-          <small>Valoración: {{rating}} estrellas</small>
+          <div class="info-rating">
+            <small>Valoración:
+              <bar-rating [(rate)]="application.rating" [max]="5" [theme]="'default'"></bar-rating>
+            </small>
+          </div>
           <br>
-          <a *ngFor="let item of starList; let i=index " (click)="setStar(i)">
-            <i *ngIf="item" class="fa fa-star-o"></i>
-            <i *ngIf="!item" class="fa fa-star"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="jumbotron">
-        <a href="/application">
-          <img class="logo" src="assets/images/logos/app1.webp" alt="">
-        </a>
-        <br>
-        <div class="info">
-          <small>Nombre: {{name}}</small>
-          <br>
-          <small>Categoría: {{category}}</small>
-          <br>
-          <small>Valoración: {{rating}} estrellas</small>
-          <br>
-          <a *ngFor="let item of starList; let i=index " (click)="setStar(i)">
-            <i *ngIf="item" class="fa fa-star-o"></i>
-            <i *ngIf="!item" class="fa fa-star"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="jumbotron">
-        <a href="/application">
-          <img class="logo" src="assets/images/logos/app1.webp" alt="">
-        </a>
-        <br>
-        <div class="info">
-          <small>Nombre: {{name}}</small>
-          <br>
-          <small>Categoría: {{category}}</small>
-          <br>
-          <small>Valoración: {{rating}} estrellas</small>
-          <br>
-          <a *ngFor="let item of starList; let i=index " (click)="setStar(i)">
-            <i *ngIf="item" class="fa fa-star-o"></i>
-            <i *ngIf="!item" class="fa fa-star"></i>
-          </a>
         </div>
       </div>
     </div>
