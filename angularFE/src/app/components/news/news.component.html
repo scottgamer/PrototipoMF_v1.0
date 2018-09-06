@@ -3,40 +3,19 @@
 </p>
 
 <!-- New 1 -->
-<div class="row">
+<div class="row" *ngFor='let new of news'>
   <div class="col-md-12">
     <div class="news-container">
       <div class="news-header">
         <h4>
-          <strong> {{headerTitle}} </strong>
+          <strong> {{new.title}} </strong>
         </h4>
       </div>
       <div class="news-body">
-        {{body}}
+        {{new.body}}
       </div>
       <div class="news-read-more">
-        <a href="/new">
-          <button role="button" class="btn btn-info pull-right">Leer más</button>
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- New 2 -->
-<div class="row">
-  <div class="col-md-12">
-    <div class="news-container">
-      <div class="news-header">
-        <h4>
-          <strong> {{headerTitle}} </strong>
-        </h4>
-      </div>
-      <div class="news-body">
-        {{body}}
-      </div>
-      <div class="news-read-more">
-        <a href="/new">
+        <a routerLink='/new/{{new.id}}'>
           <button role="button" class="btn btn-info pull-right">Leer más</button>
         </a>
       </div>

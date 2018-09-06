@@ -15,6 +15,7 @@ import { ApplicationService } from '../../services/application.service';
 //classes
 import { Application } from '../../models/application-model';
 import { Question } from '../../models/questions-model';
+import { Response } from '../../models/responses-model';
 
 @Component({
   selector: 'app-application',
@@ -26,8 +27,6 @@ export class ApplicationComponent implements OnInit {
 
   @Input() application: Application; 
 
-  //using application-model
-  // application: Application;
   questions: Question[];
 
   half1: string;
@@ -57,9 +56,7 @@ export class ApplicationComponent implements OnInit {
     this.loadQuestions();
   }
 
-  //get application by id
   getApplication(): void {
-    // static image of the route information
     const id = +this.route.snapshot.paramMap.get('id');
     this.applicationService.getApplication(id)
       .subscribe(application => this.application = application);
@@ -70,16 +67,26 @@ export class ApplicationComponent implements OnInit {
       id: 1,
       question: this.lorem,
       date: '10/30/2018',
+      author: 'User123',
       responses: [
         {
           id: 1,
           response: this.lorem,
           date: '10/30/2018',
-        }, {
+          author: 'User456'
+        }, 
+        {
           id: 2,
           response: this.lorem,
           date: '10/30/2018',
+          author: 'User789'
         },
+        {
+          id: 3,
+          response: this.lorem,
+          date: '10/30/2018',
+          author: 'User789'
+        }
       ]
     }];
   }
@@ -87,7 +94,7 @@ export class ApplicationComponent implements OnInit {
   getHalfString(): void {
     let descript = this.application.description;
     let size = descript.length / 2;
-    this.half1 = descript.substr(0, size);
+    this.half1 = descript.substr(0, size+1);
     this.half2 = descript.substr(size + 1);
   }
 

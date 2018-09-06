@@ -1,35 +1,39 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
+//dynamic routing using ids in url
+import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
+
+//classes
 import { New } from '../../models/new-model';
+//services
+import { NewsService } from '../../services/news.service';
 
 @Component({
   selector: 'app-new',
+  providers:[NewsService],
   templateUrl: './new.component.html',
   styleUrls: ['./new.component.css']
 })
 export class NewComponent implements OnInit {
 
-  news: New;
+  @Input() new: New;
 
-  constructor() { }
+  constructor(private newsService:NewsService,
+              private route:ActivatedRoute,
+              private location:Location) { }
 
   ngOnInit() {
-    this.loadNews();
+    this.getNew();
   }
 
-  loadNews(): void {
-    this.news = {
-      title: 'El joven invidente que narra los partidos del Málaga desde la grada',
-      body: 'El fútbol tiene mucho de ritual. La multitud coreando el nombre de su '+
-      'equipo, las banderas ondeando en las gradas, la locura desatada con cada gol '+
-      'o la desesperación cuando se falla una ocasión. Durante 90 minutos los aficionados'+
-      ' viven sumidos en una montaña rusa: expectación cuando el balón ronda el área rival, '+
-      'nervios cuando se acerca a la propia. Ese ambiente es el que cautivó a Juan Antonio Zamora, '+
-      'un invidente de 25 años. El joven nunca ha visto el escudo de su club ni conoce los colores del '+
-      'Málaga, pero no se pierde ninguno de sus partidos. “No hace falta ver el fútbol. Hay que ponerle pasión '+
-      'y sentimiento. Vivir el ambiente”, señala.',
-      imgs: ['assets/images/news/new1/new1-1.jpg',]
-    };
+  getNew(): void {
+    // static image of the route information
+    const id = +this.route.snapshot.paramMap.get('id');
+    this.newsService.getNew(id)
+      .subscribe(neew => this.new = neew);
   }
+
+  
 
 }

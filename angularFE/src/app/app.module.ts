@@ -25,19 +25,21 @@ import { UserComponent } from './components/user/user.component';
 import { NewComponent } from './components/new/new.component';
 import { EventComponent } from './components/event/event.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { CategoryComponent } from './components/category/category.component';
 
 const appRoutes: Routes = [
   {path:'', component:HomeComponent},
   {path:'home', component:HomeComponent},
   {path:'applications', component:ApplicationsComponent},
   {path:'news', component:NewsComponent},
-  {path:'new', component:NewComponent},
+  {path:'new/:id', component:NewComponent},
   {path:'events', component:EventsComponent},
   {path:'event/:id', component:EventComponent},
   {path:'application/:id', component:ApplicationComponent},
   {path:'login', component:LoginComponent},
   {path:'register', component:RegisterComponent},
-  {path:'user', component:UserComponent},
+  {path:'user/:id', component:UserComponent},
+  {path:'category', component:CategoryComponent},
   { path: '**', component: PageNotFoundComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
 ];
@@ -55,7 +57,8 @@ const appRoutes: Routes = [
     UserComponent,
     NewComponent,
     EventComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    CategoryComponent
   ],
   imports: [
     BrowserModule,

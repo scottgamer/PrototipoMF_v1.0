@@ -16,7 +16,7 @@
 
           <ul class="nav flex-column">
             <li class="nav-item">
-              Usuario123
+              {{user.username}}
               <hr>
             </li>
             <li class="nav-item">
@@ -42,17 +42,16 @@
               </button>
             </div>
             <div class="modal-body">
-              <div class="modal-row" *ngFor="let app of apps">
+              <div class="modal-row" *ngFor="let app of user.downloadedApps">
                 <div class="user-apps-history-left">
-                  <img class="user-apps-img" src="assets/images/logos/{{app.img}}" alt="">
+                  <img class="user-apps-img" src="{{app.logo}}" alt="">
                 </div>
                 <div class="user-apps-history-right">
                   Nombre: {{app.name}}
                   <br> Categoría: {{app.category}}
-                  <br> Valoración: {{app.starList}} {{rating}}
-                  <br>
-                  <a href="/application">
-                    <button role="button" class="btn btn-success center-block" tooltip='Ver aplicación'> Ver </button>
+
+                  <a routerLink='/application/{{app.id}}'>
+                    <button role="button" class="btn btn-success center-block" tooltip='Ver aplicación' (click)='modalRef.hide();'> Ver </button>
                   </a>
                 </div>
               </div>
@@ -68,17 +67,17 @@
               </button>
             </div>
             <div class="modal-body">
-              <div class="modal-row" *ngFor="let question of questions">
+              <div class="modal-row" *ngFor="let question of user.questionsMade">
                 <div class="user-questions-responses">
                   <strong>Respuestas:</strong>
-                  <br> 1
+                  <br> {{question.responses.length}}
                 </div>
                 <div class="user-questions-question">
                   <div class="user-question-header">
                     <strong>Pregunta: </strong>
                   </div>
                   <div class="user-question-body">
-                    {{question.body}}
+                    {{question.question}}
                   </div>
                   <button role="button" class="btn btn-success center-block" tooltip='Ver pregunta' (click)='openModal(templateResponses)'>
                     Ver </button>
@@ -96,27 +95,27 @@
               </button>
             </div>
             <div class="modal-body">
-              <div class="modal-row" *ngFor="let question of questions">
+              <div class="modal-row" *ngFor="let question of user.questionsMade">
                 <div class="response-container">
                   <div class="response-question-header">
                     <strong>Pregunta: </strong>
                   </div>
                   <div class="response-question-body">
-                    {{question.body}}
+                    {{question.question}}
                   </div>
                   <div class="response-responses-header">
-                    <strong>Todas las respuestas: {{question.responseCount}}</strong>
+                    <strong>Todas las respuestas: {{question.responses.length}}</strong>
                   </div>
-                  <div *ngFor="let question of questions">
-                    <div class="response-responses" *ngFor="let response of question.responses">
+                  <div *ngFor="let response of question.responses">
+                    <div class="response-responses" >
                       <div class="response-responses-id">
-                        <strong>Respuesta {{response.responseId}}</strong>
+                        <strong>Respuesta {{response.id}}</strong>
                       </div>
                       <div class="response-responses-body">
-                        {{response.responseBody}}
+                        {{response.response}}
                       </div>
                       <div class="response-responses-user pull-right">
-                        Respondió: Usuario123
+                        Respondió: {{response.author}}
                         <br> Fecha: {{response.date}}
                       </div>
                     </div>
@@ -125,6 +124,7 @@
               </div>
             </div>
           </ng-template>
+          
 
           <!-- Saved events -->
           <ng-template #templateEvents>
@@ -135,15 +135,15 @@
               </button>
             </div>
             <div class="modal-body">
-              <div class="modal-row" *ngFor="let app of apps">
+              <div class="modal-row" *ngFor="let event of user.savedEvents">
                 <div class="events-container">
                   <div class="events-header">
-                    <h4>Evento 1</h4>
+                    <h4>{{event.name}}</h4>
                   </div>
-                  <img class="events-img" src="assets/images/events/event1.PNG" alt="">
+                  <img class="events-img" src="{{event.img}}" alt="">
                   <div class="events-btn-more">
-                    <a href="/event">
-                      <button role="button" class="btn btn-info pull-right">Más información</button>
+                    <a href="/event/{{event.id}}">
+                      <button role="button" class="btn btn-info pull-right" (click)="modalRef.hide()">Más información</button>
                     </a>
                   </div>
                 </div>
@@ -158,7 +158,7 @@
     <div class="col-md-8">
       <div class="user-right">
         <div class="user-info">
-          <label for="">Nombre:</label> {{fullName}}
+          <label for="">Nombre:</label> {{user.fullName}}
           <span>
             <i role="button" tooltip="Editar" class="fa fa-pencil" aria-hidden="true" (click)="editInfo(template)"></i>
           </span>
@@ -170,7 +170,7 @@
               <p>Editar campo</p>
               <form action="">
                 <div class="form-group">
-                  <input type="text" class="form-control" placeholder="Ingrese" [(ngModel)]="fullName" name="fullName">
+                  <input type="text" class="form-control" placeholder="Ingrese" [(ngModel)]="user.fullName" name="user.fullName">
                 </div>
               </form>
               <button type="button" class="btn btn-default" (click)="confirm()">Guardar</button>
@@ -179,31 +179,31 @@
 
         </div>
         <div class="user-info">
-          <label for="">Correo:</label> {{email}}
+          <label for="">Correo:</label> {{user.email}}
           <span>
             <i class="fa fa-pencil" aria-hidden="true"></i>
           </span>
         </div>
         <div class="user-info">
-          <label for="">Contrasena:</label> {{password}}
+          <label for="">Contrasena:</label> {{user.password}}
           <span>
             <i class="fa fa-pencil" aria-hidden="true"></i>
           </span>
         </div>
         <div class="user-info">
-          <label for="">Cumpleanios:</label> {{birthdayDate}}
+          <label for="">Cumpleanios:</label> {{user.birthday}}
           <span>
             <i class="fa fa-pencil" aria-hidden="true"></i>
           </span>
         </div>
         <div class="user-info">
-          <label for="">Género:</label> {{genre}}
+          <label for="">Género:</label> {{user.genre}}
           <span>
             <i class="fa fa-pencil" aria-hidden="true"></i>
           </span>
         </div>
         <div class="user-info">
-          <label for="">Nacionalidad:</label> {{nationality}}
+          <label for="">Nacionalidad:</label> {{user.nationality}}
           <span>
             <i class="fa fa-pencil" aria-hidden="true"></i>
           </span>
@@ -213,9 +213,7 @@
           <span>
             <i class="fa fa-pencil" aria-hidden="true"></i>
           </span>
-          <br> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci molestias iure eum totam necessitatibus modi,
-          reiciendis voluptate perspiciatis qui vero, magnam autem suscipit eos, omnis quis. Distinctio aperiam perspiciatis
-          temporibus!
+          <br> {{user.bio}}
         </div>
 
       </div>

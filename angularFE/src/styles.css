@@ -55,7 +55,7 @@ hr{
     .user-right{
         margin: 5%;
         border-left: solid rgb(205, 205, 205);
-        padding-left: 5%;
+        padding-left: 10%;
     }
     .userprofile-image{
         padding: 5%;
@@ -363,7 +363,7 @@ hr{
         float: left;
         padding: 2%;
         text-align: center;
-        margin-top: 10%;
+        margin-top: 5%;
     }
 
     .user-questions-question{
@@ -390,6 +390,7 @@ hr{
     .response-responses-user{
         margin: 1%;
     }
+    
     .br[_ngcontent-c2]{
         margin: 0px;
         display: inline-block;
@@ -629,5 +630,44 @@ hr{
     }
     .error-body{
         width: 70%;
+    }
+    .modal-row{
+        width: 100%;
+        border: solid rgb(205, 205, 205);
+        padding: 1%;
+        margin: 1%;
+        display: inline-block;
+    }
+    .user-apps-img{
+        width: 70%;
+        padding-left: 30%;
+        padding-top: 2%;
+    }
+    .user-apps-history-right{
+        padding-top: 2%;
+        padding-bottom: 2%;
+        padding-left: 10%;
+    }
+    .user-questions-question{
+        padding: 3%;
+    }
+    .user-questions-responses{
+        display: none;
+    }
+    .response-container{
+        padding: 3%;
+    }
+    .response-responses-header{
+        margin: 2%;
+        border-top: solid rgb(205, 205, 205);
+        padding: 2%;
+    }
+    .response-responses-id{
+        padding-top: 1%;
+        border-top: solid rgb(205, 205, 205);
+        clear: both;
+    }
+    .events-img{
+        height: 105px;
     }
 }
