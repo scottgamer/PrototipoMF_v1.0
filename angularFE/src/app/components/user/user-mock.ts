@@ -46,6 +46,7 @@ export const USERS: User[] = [
                     date: '10/30/2018',
                     rating: 5,
                 }],
+                downloadedTimes:1,
             },
             {
                 id: 2,
@@ -78,6 +79,7 @@ export const USERS: User[] = [
                     date: '10/30/2018',
                     rating: 5,
                 }],
+                downloadedTimes:1,
             }
 
         ],

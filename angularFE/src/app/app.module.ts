@@ -26,6 +26,7 @@ import { NewComponent } from './components/new/new.component';
 import { EventComponent } from './components/event/event.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { CategoryComponent } from './components/category/category.component';
+import { HelpComponent } from './components/help/help.component';
 
 const appRoutes: Routes = [
   {path:'', component:HomeComponent},
@@ -39,7 +40,8 @@ const appRoutes: Routes = [
   {path:'login', component:LoginComponent},
   {path:'register', component:RegisterComponent},
   {path:'user/:id', component:UserComponent},
-  {path:'category', component:CategoryComponent},
+  {path:'category/:id', component:CategoryComponent},
+  {path:'help', component:HelpComponent},
   { path: '**', component: PageNotFoundComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
 ];
@@ -58,7 +60,8 @@ const appRoutes: Routes = [
     NewComponent,
     EventComponent,
     PageNotFoundComponent,
-    CategoryComponent
+    CategoryComponent,
+    HelpComponent,
   ],
   imports: [
     BrowserModule,
@@ -69,7 +72,7 @@ const appRoutes: Routes = [
     CollapseModule.forRoot(),
     CarouselModule.forRoot(),
     BarRatingModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
   ],
   providers: [
     Title,

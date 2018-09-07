@@ -39,15 +39,15 @@
     <div class="collapse navbar-collapse" id="myNavbar" [collapse]="isCollapsed">
       <ul class="nav navbar-nav navbar-right">
         <li>
-          <a href="/register">
+          <a routerLink="/register">
             <span class="glyphicon glyphicon-user"></span> Regístrate</a>
         </li>
         <li>
-          <a href="/login">
+          <a routerLink="/login">
             <span class="glyphicon glyphicon-log-in"></span> Ingresa</a>
         </li>
         <li>
-          <a href="#">
+          <a routerLink='/help'>
             <span class="glyphicon glyphicon-question-sign"></span> Ayuda</a>
         </li>
       </ul>
@@ -70,11 +70,8 @@
           <span class="caret"></span>
         </a>
         <ul *dropdownMenu class="dropdown-menu">
-          <li>
-            <a href="#">Baja Visión</a>
-          </li>
-          <li>
-            <a href="#">Ceguera</a>
+          <li *ngFor="let category of categories">
+            <a routerLink='/category/{{category.id}}'>{{category.name}}</a>
           </li>
           <li role="separator" class="divider"></li>
           <li>
@@ -84,13 +81,13 @@
       </li>
 
       <li>
-        <a href="applications">Aplicaciones</a>
+        <a routerLink='/applications'>Aplicaciones</a>
       </li>
       <li>
-        <a href="news">Noticias</a>
+        <a routerLink="/news">Noticias</a>
       </li>
       <li>
-        <a href="events">Eventos</a>
+        <a routerLink="/events">Eventos</a>
       </li>
     </ul>
   </div>

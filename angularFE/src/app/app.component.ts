@@ -1,44 +1,44 @@
 import { Component } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { CollapseModule} from 'ngx-bootstrap/collapse'
+import { CollapseModule} from 'ngx-bootstrap/collapse';
+
+//classes
+import { Category } from '../app/models/category-model';
+
+//services
+import { CategoryService } from '../app/services/category.service';
 
 
 @Component({
   selector: 'app-root',
+  providers:[CategoryService],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   
+  categories:Category[];
+
   isCollapsed = true;
 
-  title = 'Discapacidad Visual';
-  name = "Aplicacion";
-  category = "Baja visión"
-  starList: boolean[] = [true, true, true, true, true];
-  rating: number;
-
-  public constructor(private titleService: Title, private collapse:CollapseModule) { 
+  public constructor( private titleService: Title, 
+                      private collapse:CollapseModule,
+                      private categoryService:CategoryService) { 
     this.isCollapsed = true;
-  }
-
-  public setTitle(newTitle: string) {
-    this.titleService.setTitle(newTitle);
-  }
-
-  setStar(data: any) {
-    this.rating = data + 1;
-    for (var i = 0; i <= 4; i++) {
-      if (i <= data) {
-        this.starList[i] = false;
-      }
-      else {
-        this.starList[i] = true;
-      }
-    }
   }
 
   ngOnInit() {
     this.setTitle('Catalogo de Aplicaciones para Discapacidad Visual');
+    this.getCategories();
+  }
+
+  getCategories(): void {
+    this.categoryService.getCategories()
+        .subscribe(categories => this.categories = categories);
+    console.log('Categories service loaded');
+  }
+
+  public setTitle(newTitle: string) {
+    this.titleService.setTitle(newTitle);
   }
 }

@@ -4,8 +4,11 @@ import { Component, OnInit } from '@angular/core';
 import { BarRatingModule } from "ngx-bar-rating";
 //classes
 import { Application } from '../../models/application-model';
+import { Category } from '../../models/category-model';
 //services
 import { ApplicationService } from '../../services/application.service';
+import { CategoryService } from '../../services/category.service';
+
 
 
 @Component({
@@ -17,6 +20,9 @@ import { ApplicationService } from '../../services/application.service';
 export class HomeComponent implements OnInit {
 
   applications: Application[];
+  categories: Category[];
+
+  sections:{section: string, id:number, route:string}[];
 
   lorem: string = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem adipisci quod nemo ' +
     'vitae cumque sit, iusto porro! Eligendi nesciunt et amet numquam dolore voluptatem a ' +
@@ -24,18 +30,32 @@ export class HomeComponent implements OnInit {
 
   selectedApplication:Application;
 
-  public constructor(private barRatingModule: BarRatingModule, private appService:ApplicationService) {
-
-  }
+  public constructor(private barRatingModule: BarRatingModule, 
+                    private appService:ApplicationService,
+                    private categoryService:CategoryService) {}
 
   ngOnInit() {
     this.getApplications();
+    this.getSections();
     
   }
 
   getApplications(): void {
     this.appService.getApplications()
         .subscribe(applications => this.applications = applications);
+  }
+
+  getSections():void{
+    this.sections = [ {section: 'Aplicaciones más descargadas', id: 4, route: '/applications'},
+                      {section: 'Últimas subidas', id: 3, route: '/applications'},
+                      {section: 'Baja Visión', id: 1, route: '/category'},
+                      {section: 'Ceguera', id:2, route: '/category'}];
+
+  }
+
+  getCategories():void{
+    this.categoryService.getCategories().
+          subscribe(categories => this.categories=categories);
   }
 
   onSelect(application: Application): void {

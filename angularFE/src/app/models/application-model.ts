@@ -16,4 +16,5 @@ export class Application {
     androidMin: string;
     appWebPage: string;
     commentaries:Commentary[];
+    downloadedTimes:number;
 }

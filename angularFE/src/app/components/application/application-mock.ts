@@ -35,6 +35,7 @@ export const APPLICATIONS: Application[] = [
             date: '10/30/2018',
             rating: 5,
         }],
+        downloadedTimes:1
     },
     {
         id: 2,
@@ -67,6 +68,7 @@ export const APPLICATIONS: Application[] = [
             date: '10/30/2018',
             rating: 5,
         }],
+        downloadedTimes:1
     },
     {
         id: 3,
@@ -102,6 +104,7 @@ export const APPLICATIONS: Application[] = [
             date: '10/30/2018',
             rating: 5,
         }],
+        downloadedTimes:1
     }
 
 ];
