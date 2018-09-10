@@ -23,7 +23,6 @@ export class HelpComponent implements OnInit {
 
   getArticles(): void{
     this.helpService.getHelpArticles().subscribe(article => this.helpArticles = article);
-    console.log('Help service loaded');
   }
 
 

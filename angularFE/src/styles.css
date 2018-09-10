@@ -4,7 +4,6 @@ hr{
     margin-bottom: 10px;
 }
   
-
 @media only screen and (min-width: 768px) {
     /* tablets and desktop */
 
@@ -59,7 +58,8 @@ hr{
     }
     .userprofile-image{
         padding: 5%;
-        margin-left: 30%;
+        text-align: center;
+        /* margin-left: 30%; */
     }
     .user-actions{
         margin-top: 5%;
@@ -670,4 +670,15 @@ hr{
     .events-img{
         height: 105px;
     }
+    .user-actions{
+        margin-top: 5%;
+        text-align: center;
+    }
+    
+    #collapsible-btn{
+        margin-left: 15px;
+        margin-top: 19px;
+        margin-right: 5px;
+    }
+    
 }

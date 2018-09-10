@@ -4,23 +4,21 @@
 
     <!--Logo & brand name-->
     <div class="navbar-header">
-
-      <!-- Collpasible button -->
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" (click)="isCollapsed = !isCollapsed"
-        aria-expanded="false">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-
-      <a class="navbar-brand" href="/">
+      <a class="navbar-brand" routerLink="/">
         <span>
           <img id="brand-image" src="assets/images/Logo.svg">
           <img id="brand-image" src="assets/images/LogoTitulo.svg">
         </span>
       </a>
-      <!--<span class="navbar-brand">Angular + Bootstrap</span>-->
     </div>
+
+    <!-- Collapsible button -->
+    <button id="collapsible-btn" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" (click)="isCollapsed = !isCollapsed"
+      aria-expanded="false">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
 
     <!--Search bar-->
     <form id="search-bar" class="navbar-form navbar-left" action="#">
@@ -59,44 +57,42 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
 
-    <ul class="nav navbar-nav">
-      <li class="active">
-        <a href="home">Home</a>
-      </li>
+    <div class="collapse navbar-collapse" id="myNavbar" [collapse]="isCollapsed">
+      <ul class="nav navbar-nav">
+        <li class="active">
+          <a routerLink="home" (click)='reloadRoute()'>Home</a>
+        </li>
 
-      <!--dropdown-->
-      <li dropdown class="dropdown">
-        <a dropdownToggle role="button">Categorías
-          <span class="caret"></span>
-        </a>
-        <ul *dropdownMenu class="dropdown-menu">
-          <li *ngFor="let category of categories">
-            <a routerLink='/category/{{category.id}}'>{{category.name}}</a>
-          </li>
-          <li role="separator" class="divider"></li>
-          <li>
-            <a href="#">Todas las categorías</a>
-          </li>
-        </ul>
-      </li>
+        <!--dropdown-->
+        <li dropdown class="dropdown">
+          <a dropdownToggle role="button">Categorías
+            <span class="caret"></span>
+          </a>
+          <ul *dropdownMenu class="dropdown-menu">
+            <li *ngFor="let category of categories">
+              <a routerLink='/category/{{category.id}}' (click)='reloadRoute()'>{{category.name}}</a>
+            </li>
+            <li role="separator" class="divider"></li>
+            <li>
+              <a routerLink="#">Todas las categorías</a>
+            </li>
+          </ul>
+        </li>
 
-      <li>
-        <a routerLink='/applications'>Aplicaciones</a>
-      </li>
-      <li>
-        <a routerLink="/news">Noticias</a>
-      </li>
-      <li>
-        <a routerLink="/events">Eventos</a>
-      </li>
-    </ul>
+        <li>
+          <a routerLink='/applications'>Aplicaciones</a>
+        </li>
+        <li>
+          <a routerLink="/news">Noticias</a>
+        </li>
+        <li>
+          <a routerLink="/events">Eventos</a>
+        </li>
+      </ul>
+    </div>
+
   </div>
 </nav>
-<br>
-
-<!-- <div style="text-align:center">
-    <h1>Catálogo de Aplicaciones para {{ title }}</h1>
-  </div> -->
 
 
 <router-outlet></router-outlet>

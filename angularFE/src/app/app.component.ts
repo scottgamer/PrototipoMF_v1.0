@@ -19,6 +19,7 @@ export class AppComponent {
   
   categories:Category[];
 
+  //menu component
   isCollapsed = true;
 
   public constructor( private titleService: Title, 
@@ -31,6 +32,10 @@ export class AppComponent {
     this.setTitle('Catalogo de Aplicaciones para Discapacidad Visual');
     this.getCategories();
   }
+
+  reloadRoute = function() {
+    this.location.reload();
+ }
 
   getCategories(): void {
     this.categoryService.getCategories()
